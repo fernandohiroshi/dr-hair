@@ -5,8 +5,8 @@ import logo from '../../../public/logo.jpeg'
 const servicesLinks = [
   { href: '/fue', label: 'Transplante Fue' },
   { href: '/prp', label: 'Plasma Rico Plaquetas' },
-  { href: '/mmp', label: 'Fotobiomodulação a Laser' },
-  { href: '/fotobiomodulacao', label: 'Microinfusão de Medicamentos' },
+  { href: '/fotobiomodulacao', label: 'Fotobiomodulação a Laser' },
+  { href: '/mmp', label: 'Microinfusão de Medicamentos' },
 ]
 
 const contactLinks = [
