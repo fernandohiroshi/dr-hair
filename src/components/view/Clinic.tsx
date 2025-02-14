@@ -15,6 +15,7 @@ export function Clinic() {
     'https://imgix.cosmicjs.com/e4a33980-e9a6-11ef-9da4-c1d07900a603-recepcao.jpg',
     'https://imgix.cosmicjs.com/e35017f0-e448-11ef-8a63-eb57d6c77a36-cirugia-py.jpeg',
     'https://imgix.cosmicjs.com/92458030-eaa0-11ef-af71-9552422268b6-clinic4.jpeg',
+    'https://imgix.cosmicjs.com/8293af50-eabd-11ef-af71-9552422268b6-clinic05.jpg',
   ]
 
   return (
