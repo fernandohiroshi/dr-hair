@@ -1,16 +1,35 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { FlatCompat } from '@eslint/eslintrc'
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+  baseDirectory: import.meta.dirname,
+})
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
-
-export default eslintConfig;
+export default [
+  ...compat.extends(
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'prettier',
+  ),
+  {
+    plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+    },
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+      'import-helpers/order-imports': [
+        'warn',
+        {
+          newlinesBetween: 'always',
+          groups: [['module', '/^next/'], '/^@/styles/', '/^@/components/', '/@/lib/', ['parent', 'sibling', 'index']],
+          alphabetize: {
+            order: 'asc',
+            ignoreCase: true,
+          },
+        },
+      ],
+    },
+  },
+]
