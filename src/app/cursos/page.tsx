@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Timeline } from '@/components/ui/timeline'
 import AssessmentBtn from '@/components/view/AssessmentBtn'
+import ImersaoFUE from '@/components/view/ImersaoFue'
 
 export default function CursoPage() {
   const items = [
@@ -127,6 +128,7 @@ export default function CursoPage() {
 
   return (
     <main className="mx-auto mt-8 max-w-screen-xl scroll-mt-24 px-2 py-16 md:mt-24 md:pt-24">
+      <ImersaoFUE />
       <Timeline
         title="Cursos de Estética Avançada"
         description="Aprimore suas técnicas com especialistas e expanda suas oportunidades no mercado."

@@ -23,7 +23,8 @@ export function Clinic() {
       <div className="mb-8 md:mb-16">
         <h2 className="mb-2 text-xl font-semibold md:text-2xl">Venha conhecer nossa clínica</h2>
         <p className="max-w-2xl text-justify text-sm md:text-lg">
-        Nossa clínica oferece um ambiente moderno e acolhedor, onde você recebe atendimento especializado e personalizado. Agende uma visita e descubra como podemos transformar sua autoestima!
+          Nossa clínica oferece um ambiente moderno e acolhedor, onde você recebe atendimento especializado e
+          personalizado. Agende uma visita e descubra como podemos transformar sua autoestima!
         </p>
       </div>
 

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import { ImagesSlider } from '@/components/ui/images-slider'
-import { IoLogoWhatsapp } from 'react-icons/io'
+import Link from 'next/link'
 
 export function Hero() {
   const images = [
@@ -39,15 +39,16 @@ export function Hero() {
             <motion.p className="py-2 text-center text-xs font-semibold text-white md:max-w-xl md:py-4 md:text-sm lg:max-w-xl lg:text-base">
               Transplante capilar natural e definitivo.
             </motion.p>
-            <a
-              href="https://wa.me/5545991280101"
-              className="relative mx-auto mt-2 rounded-2xl border border-emerald-500/40 bg-emerald-500 px-4 py-2 text-center text-white backdrop-blur-sm duration-300 ease-in-out hover:bg-emerald-400"
+            <Link
+              href="/cursos"
+              title="Saiba mais!"
+              className="relative mx-auto rounded-3xl bg-[#A79356] px-4 py-3 text-center text-white shadow-xl backdrop-blur-sm duration-300 ease-in-out hover:brightness-125"
             >
-              <span className="flex items-center gap-4 text-xs font-semibold md:text-base">
-                Fale Conosco <IoLogoWhatsapp size={24} />
+              <span className="items-centertext-xs flex flex-col md:text-sm">
+                <span className="text-base font-bold">IMERSÃO F.U.E. </span>
+                <span className="font-semibold"> Curso de Transplante Capilar</span>
               </span>
-              <div className="absolute inset-x-0 -bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-emerald-400 to-transparent" />
-            </a>
+            </Link>
           </motion.div>
         </ImagesSlider>
       </div>
@@ -66,15 +67,16 @@ export function Hero() {
             <motion.p className="py-2 text-center text-xs font-semibold text-white md:max-w-xl md:py-4 md:text-sm lg:max-w-2xl lg:text-base">
               Transplantes capilares naturais e duradouros.
             </motion.p>
-            <a
-              href="https://wa.me/5545991280101"
-              className="relative mx-auto mt-2 rounded-2xl border border-emerald-500/40 bg-emerald-500 px-4 py-2 text-center text-white backdrop-blur-sm duration-300 ease-in-out hover:bg-emerald-400"
+            <Link
+              href="/cursos"
+              title="Saiba mais!"
+              className="relative mx-auto rounded-3xl bg-[#A79356] px-4 py-2 text-center text-white shadow-xl backdrop-blur-sm duration-300 ease-in-out hover:brightness-125"
             >
-              <span className="flex items-center gap-4 text-xs font-semibold md:text-base">
-                Fale Conosco <IoLogoWhatsapp size={24} />
+              <span className="items-centertext-xs flex flex-col md:text-sm">
+                <span className="text-sm font-bold">IMERSÃO F.U.E. </span>
+                <span className="text-xs font-semibold"> Curso de Transplante Capilar</span>
               </span>
-              <div className="absolute inset-x-0 -bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-emerald-400 to-transparent" />
-            </a>
+            </Link>
           </motion.div>
         </ImagesSlider>
       </div>
