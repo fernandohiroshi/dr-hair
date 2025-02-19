@@ -9,7 +9,7 @@ export default function ImersaoFUE() {
           <div className="mb-4 inline-block rounded-lg bg-[#A79356] px-4 py-2 text-2xl font-bold text-white">
             IMERSÃO F.U.E. <span className="hidden md:inline">- MÉTODO EXCLUSIVO</span>
           </div>
-          <h2 className="text-xl font-bold text-black md:text-2xl">
+          <h2 className="text-xl font-bold text-black">
             MÉDICO, DOMINE TÉCNICAS AVANÇADAS EM TRANSPLANTE CAPILAR, SOBRANCELHA E BARBA!
           </h2>
           <p className="mt-4 text-xs text-black/90 md:text-lg">
@@ -32,7 +32,7 @@ export default function ImersaoFUE() {
       </div>
 
       <div className="mt-16">
-        <h3 className="text-xl font-bold text-black md:text-2xl">
+        <h3 className="text-xl font-bold text-black ">
           IMERSÃO F.U.E. – A Arte e a Ciência do Implante Capilar
         </h3>
         <p className="mt-4 text-xs text-black/90 md:text-lg">
@@ -75,7 +75,7 @@ export default function ImersaoFUE() {
       </div>
 
       <div className="mt-16">
-        <h3 className="text-xl font-bold text-black md:text-2xl">IMERSÃO F.U.E. – Hands-On Exclusivo</h3>
+        <h3 className="text-xl font-bold text-black ">IMERSÃO F.U.E. – Hands-On Exclusivo</h3>
         <p className="mt-4 text-xs text-black/90 md:text-lg">
           Uma jornada transformadora para médicos que desejam dominar o transplante capilar com excelência. Nosso
           programa é estruturado em cinco dias intensivos, combinando teoria, prática e inovação.
@@ -105,10 +105,10 @@ export default function ImersaoFUE() {
       </div>
 
       <div className="mt-16">
-        <h3 className="text-xl font-bold text-black md:text-2xl">CRONOGRAMA – IMERSÃO F.U.E.</h3>
+        <h3 className="text-xl font-bold text-black ">CRONOGRAMA – IMERSÃO F.U.E.</h3>
         <div className="mt-6 space-y-8">
           <div>
-            <h4 className="text-xl font-semibold text-black md:text-2xl">Dia 1 - Teórico</h4>
+            <h4 className="text-xl font-semibold text-black ">Dia 1 - Teórico</h4>
             <ul className="mt-3 space-y-2 text-xs text-black/90 md:text-lg">
               <li>
                 🔹 Calvície Masculina e Feminina – Como explicar para o paciente sobre seu grau de alopecia e opções de
@@ -121,7 +121,7 @@ export default function ImersaoFUE() {
             </ul>
           </div>
           <div>
-            <h4 className="text-xl font-semibold text-black md:text-2xl">Dia 2 - Teórico e Prático</h4>
+            <h4 className="text-xl font-semibold text-black ">Dia 2 - Teórico e Prático</h4>
             <ul className="mt-3 space-y-2 text-xs text-black/90 md:text-lg">
               <li>
                 🔹 Técnica F.U.E. – Fundamentos e Precisão – Compreenda os pilares dessa técnica inovadora e seus
@@ -137,7 +137,7 @@ export default function ImersaoFUE() {
             </p>
           </div>
           <div>
-            <h4 className="text-xl font-semibold text-black md:text-2xl">Dia 3 - Transplante Capilar Masculino</h4>
+            <h4 className="text-xl font-semibold text-black ">Dia 3 - Transplante Capilar Masculino</h4>
             <ul className="mt-3 space-y-2 text-xs text-black/90 md:text-lg">
               <li>
                 🔹 Abordagem e Preparo do Paciente – Como conduzir a consulta, definir expectativas e preparar o
@@ -154,7 +154,7 @@ export default function ImersaoFUE() {
             </ul>
           </div>
           <div>
-            <h4 className="text-xl font-semibold text-black md:text-2xl">Dia 4 - Transplante de Sobrancelhas</h4>
+            <h4 className="text-xl font-semibold text-black ">Dia 4 - Transplante de Sobrancelhas</h4>
             <ul className="mt-3 space-y-2 text-xs text-black/90 md:text-lg">
               <li>
                 🔹 Arte e Técnica do Design – Como desenhar sobrancelhas harmoniosas e naturais, respeitando a anatomia
@@ -171,7 +171,7 @@ export default function ImersaoFUE() {
             </ul>
           </div>
           <div>
-            <h4 className="text-xl font-semibold text-black md:text-2xl">Dia 5 - Transplante de Barba</h4>
+            <h4 className="text-xl font-semibold text-black ">Dia 5 - Transplante de Barba</h4>
             <ul className="mt-3 space-y-2 text-xs text-black/90 md:text-lg">
               <li>
                 🔹 Design Personalizado – Aprenda a desenhar uma barba harmoniosa, respeitando os princípios do
@@ -188,7 +188,7 @@ export default function ImersaoFUE() {
             </ul>
           </div>
           <div className="mt-6 text-xs text-black/90 md:text-lg">
-            <h4 className="text-xl font-semibold text-black md:text-2xl">Encerramento & Entrega de Certificados</h4>
+            <h4 className="text-xl font-semibold text-black ">Encerramento & Entrega de Certificados</h4>
             <p>
               Celebramos o fechamento dessa jornada transformadora com a certificação oficial, marcando o início de uma
               nova fase na sua carreira médica. Torne-se um especialista desejado no mercado e ofereça resultados
