@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 import { Timeline } from '@/components/ui/timeline'
-import AssessmentBtn from '@/components/view/AssessmentBtn'
 import ImersaoFUE from '@/components/view/ImersaoFue'
+import { ContactForm } from '@/components/view/Form'
 
 export default function CursoPage() {
   const items = [
@@ -10,7 +10,7 @@ export default function CursoPage() {
       title: 'Aprenda e Transforme sua Carreira!',
       content: (
         <div className="text-justify">
-          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">
+          <p className="mb-8 text-xs text-black/90 md:text-lg">
             A área da estética avançada está em constante crescimento, e a especialização é a chave para o sucesso! Na
             Clínica Dr. Hair, oferecemos cursos exclusivos para profissionais da saúde que desejam aprimorar suas
             técnicas e expandir suas oportunidades no mercado.
@@ -31,7 +31,7 @@ export default function CursoPage() {
       title: 'Nossos Cursos',
       content: (
         <div className="text-justify">
-          <ul className="font-base mb-8 text-xs text-black/90 md:text-lg">
+          <ul className="mb-8 text-xs text-black/90 md:text-lg">
             <li>
               🔹
               <span className="font-semibold underline">Curso de Toxina Botulínica (Botox®)</span> – Aprenda as
@@ -93,7 +93,7 @@ export default function CursoPage() {
       title: 'Por que escolher nossos cursos?',
       content: (
         <div className="text-justify">
-          <ul className="font-base mb-8 text-xs text-black/90 md:text-lg">
+          <ul className="mb-8 text-xs text-black/90 md:text-lg">
             <li>🔹 Aulas teóricas e práticas com pacientes reais</li>
             <li>🔹 Certificação reconhecida</li>
             <li>🔹 Material didático completo</li>
@@ -111,19 +111,6 @@ export default function CursoPage() {
         </div>
       ),
     },
-    {
-      title: 'Inscreva-se Agora!',
-      content: (
-        <div className="flex flex-col items-end text-justify">
-          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">
-            Expanda seu conhecimento e destaque-se na estética avançada! Inscreva-se agora e dê o próximo passo na sua
-            carreira.
-          </p>
-          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">📩 Entre em contato e garanta sua vaga!</p>
-          <AssessmentBtn />
-        </div>
-      ),
-    },
   ]
 
   return (
@@ -134,6 +121,7 @@ export default function CursoPage() {
         description="Aprimore suas técnicas com especialistas e expanda suas oportunidades no mercado."
         data={items}
       />
+      <ContactForm />
     </main>
   )
 }
