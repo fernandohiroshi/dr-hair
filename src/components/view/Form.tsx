@@ -50,15 +50,17 @@ export const ContactForm = () => {
 
   return (
     <div
-      className="mt-16 flex scroll-mt-24 flex-col gap-6 rounded-xl bg-gradient-to-t from-[#a793568f] to-transparent p-8 shadow-2xl"
+      className="mt-16 flex scroll-mt-24 flex-col gap-4 rounded-xl bg-gradient-to-t from-[#a793568f] to-transparent p-8 shadow-2xl"
       id="form"
     >
-      <h2 className="animate-pulse text-xl font-semibold md:text-3xl">Entre em contato e garanta sua vaga</h2>
-      <p className="max-w-lg text-xs md:text-sm">
-        {' '}
-        Expanda seu conhecimento e destaque-se na estética avançada! Inscreva-se agora e dê o próximo passo na sua
-        carreira.
-      </p>
+      <div>
+        <h2 className="text-md mb-1 animate-pulse font-semibold md:text-2xl">Entre em contato e garanta sua vaga</h2>
+        <p className="max-w-lg text-xs md:text-sm">
+          {' '}
+          Expanda seu conhecimento e destaque-se na estética avançada! Inscreva-se agora e dê o próximo passo na sua
+          carreira.
+        </p>
+      </div>
       <input
         className="p-2 outline-none"
         type="text"
