@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import { useTranslations } from 'next-intl'
 import Autoplay from 'embla-carousel-autoplay'
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
@@ -8,6 +9,7 @@ import { Card, CardContent } from '../ui/card'
 import Image from 'next/image'
 
 export function Clinic() {
+  const t = useTranslations('Clinic')
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }))
 
   const images = [
@@ -21,22 +23,19 @@ export function Clinic() {
   return (
     <section className="scroll-mt-28 md:px-4" id="clinics">
       <div className="mb-8 md:mb-16">
-        <h2 className="mb-2 text-xl font-semibold md:text-2xl">Venha conhecer nossa clínica</h2>
-        <p className="max-w-2xl text-justify text-sm md:text-lg">
-          Nossa clínica oferece um ambiente moderno e acolhedor, onde você recebe atendimento especializado e
-          personalizado. Agende uma visita e descubra como podemos transformar sua autoestima!
-        </p>
+        <h2 className="mb-2 text-xl font-semibold md:text-2xl">{t('title')}</h2>
+        <p className="max-w-2xl text-justify text-sm md:text-lg">{t('description')}</p>
       </div>
 
       <div className="mb-8 flex flex-col gap-1">
-        <h3 className="text-lg md:text-xl">🔹Avenida 33, Hernandarias, Paraguai</h3>
+        <h3 className="text-lg md:text-xl">{t('address')}</h3>
 
         <a
           href="https://maps.app.goo.gl/mx9HA18hSStDPDLp6"
           title="Google Map"
           className="ml-2 text-sm text-red-900 duration-300 ease-in-out hover:underline md:text-lg"
         >
-          Google Map
+          {t('googleMap')}
         </a>
       </div>
       <Carousel

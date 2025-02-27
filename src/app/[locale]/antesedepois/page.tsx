@@ -1,22 +1,19 @@
 import Image from 'next/image'
-import React from 'react'
 import { Timeline } from '@/components/ui/timeline'
 import AssessmentBtn from '@/components/view/AssessmentBtn'
+import { useTranslations } from 'next-intl'
 
 export default function AntesEDepoisPage() {
+  const t = useTranslations('AntesEDepoisPage')
+
   const items = [
     {
-      title: 'Sua Transformação Começa Aqui',
+      title: t('sections.transformation_title'),
       content: (
         <div className="text-justify">
-          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">
-            A queda de cabelo pode afetar não apenas a aparência, mas também a autoestima e a confiança. O transplante
-            capilar é a solução definitiva para recuperar fios naturais e um visual rejuvenescido.
-          </p>
-          <p className="font-base my-8 text-xs text-black/90 md:text-lg">
-            Muitas pessoas chegam à nossa clínica preocupadas com a rarefação capilar, entradas acentuadas ou calvície
-            avançada. A insegurança com a aparência pode impactar desde a vida social até o desempenho profissional.
-          </p>
+          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">{t('sections.transformation_content')}</p>
+          <p className="font-base my-8 text-xs text-black/90 md:text-lg">{t('sections.concern_title')}</p>
+          <p className="font-base my-8 text-xs text-black/90 md:text-lg">{t('sections.concern_content')}</p>
           <div className="grid grid-cols-1 gap-4">
             <Image
               src="https://imgix.cosmicjs.com/382c65d0-eaa2-11ef-a238-c1ad09f4b1ad-antesedepois01.jpeg"
@@ -26,24 +23,19 @@ export default function AntesEDepoisPage() {
               className="max-h-[24rem] w-full rounded-lg object-cover"
             />
             <p className="font-base mb-8 text-xs text-black/90 md:text-lg">
-              Com a técnica avançada de transplante capilar FUE, os fios são implantados estrategicamente para um
-              resultado natural e definitivo. Após alguns meses, o cabelo cresce com força e densidade, proporcionando
-              um visual mais jovem e harmonioso.
+              {t('sections.procedure_title')}
               <br />
-              Aqui na Dr. Hair, acompanhamos de perto cada paciente para garantir um procedimento seguro e resultados
-              surpreendentes.
+              {t('sections.procedure_content')}
             </p>
           </div>
         </div>
       ),
     },
     {
-      title: 'Antes e Depois',
+      title: t('sections.before_after_title'),
       content: (
         <div className="text-justify">
-          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">
-            🔹 Confira nossas fotos de antes e depois e veja como podemos transformar sua autoestima!
-          </p>
+          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">{t('sections.before_after_content')}</p>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <Image
               src="https://imgix.cosmicjs.com/3e2972c0-eaa2-11ef-a238-c1ad09f4b1ad-antesdepois1.jpeg"
@@ -71,13 +63,10 @@ export default function AntesEDepoisPage() {
       ),
     },
     {
-      title: 'Agende sua Avaliação',
+      title: t('sections.schedule_assessment_title'),
       content: (
         <div className="flex flex-col items-end text-justify">
-          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">
-            Quer saber se o transplante capilar é para você? Agende uma avaliação e dê o primeiro passo para sua
-            transformação!
-          </p>
+          <p className="font-base mb-8 text-xs text-black/90 md:text-lg">{t('sections.schedule_assessment_content')}</p>
           <AssessmentBtn />
         </div>
       ),
@@ -86,11 +75,7 @@ export default function AntesEDepoisPage() {
 
   return (
     <main className="mx-auto mt-8 max-w-screen-xl scroll-mt-24 px-2 py-16 md:mt-24 md:pt-24">
-      <Timeline
-        title="Antes e Depois"
-        description="Veja os resultados reais dos nossos pacientes que realizaram o transplante capilar."
-        data={items}
-      />
+      <Timeline title={t('timelineTitle')} description={t('timelineDescription')} data={items} />
     </main>
   )
 }

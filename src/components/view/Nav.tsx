@@ -1,72 +1,83 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
-import { IconBrandInstagram, IconMail, IconMenu2, IconX } from '@tabler/icons-react'
+import { useTranslations } from 'next-intl'
+import { IconMenu2, IconX } from '@tabler/icons-react'
+import { Link } from '@/i18n/routing'
+import Image from 'next/image'
 
 const navLinks = [
-  { href: '/#services', title: 'services', label: 'Serviços' },
-  { href: '/#clinics', title: 'clinics', label: 'Clínica' },
-  { href: '/antesedepois', title: 'Antes e Depois', label: 'Antes e Depois' },
-  // {
-  //   href: "/esteticaavancada",
-  //   title: "Estética Avançada",
-  //   label: "Estética Avançada",
-  // },
-  { href: '/cursos', title: 'Cursos', label: 'Cursos' },
-  { href: '#contact', title: 'contact', label: 'Contato' },
+  { href: '/', title: 'home', key: 'home' },
+  { href: '/#services', title: 'services', key: 'services' },
+  { href: '/#clinics', title: 'clinics', key: 'clinics' },
+  { href: '/antesedepois', title: 'beforeAfter', key: 'beforeAfter' },
+  { href: '/cursos', title: 'courses', key: 'courses' },
+  { href: '#contact', title: 'contact', key: 'contact' },
 ]
 
-const socialLinks = [
-  {
-    href: 'https://www.instagram.com/drhairtransplantecapilar/',
-    title: 'instagram',
-    icon: <IconBrandInstagram className="h-8 w-8 duration-300 ease-in-out hover:scale-125 hover:text-[#A79356]" />,
-  },
-  {
-    href: 'mailto:drhairtransplantecapilar@gmail.com',
-    title: 'email',
-    icon: <IconMail className="h-8 w-8 duration-300 ease-in-out hover:scale-125 hover:text-[#A79356]" />,
-  },
-]
+const LanguageSwitcher = () => {
+  return (
+    <div className="flex items-center gap-2 md:gap-3">
+      <Link href="/" locale="pt">
+        <Image
+          src="/brasilia.png"
+          alt="Português"
+          width={32}
+          height={32}
+          className="rounded-full border duration-100 ease-in-out hover:scale-110 hover:brightness-110"
+        />
+      </Link>
+      <Link href="/" locale="es">
+        <Image
+          src="/paraguai.png"
+          alt="Español"
+          width={32}
+          height={32}
+          className="rounded-full border duration-100 ease-in-out hover:scale-110 hover:brightness-110"
+        />
+      </Link>
+    </div>
+  )
+}
 
-function Nav() {
+const Nav = () => {
+  const t = useTranslations('Nav')
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden items-center gap-2 text-sm md:gap-6 lg:flex lg:gap-8 xl:text-base">
-        {navLinks.map(({ href, title, label }) => (
+      <nav role="navigation" className="hidden items-center gap-2 text-sm md:gap-6 lg:flex lg:gap-8 xl:text-base">
+        {navLinks.map(({ href, title, key }) => (
           <Link
             key={href}
             className="duration-300 ease-in-out hover:tracking-wider hover:underline"
             href={href}
             title={title}
           >
-            {label}
+            {t(key)}
           </Link>
         ))}
-        <div className="flex items-center gap-2 md:gap-3">
-          {socialLinks.map(({ href, title, icon }) => (
-            <a key={href} href={href} title={title}>
-              {icon}
-            </a>
-          ))}
-        </div>
+        <LanguageSwitcher />
       </nav>
 
       {/* Mobile Navigation */}
       <div className="lg:hidden">
-        <button onClick={() => setIsOpen(true)}>
+        <button onClick={() => setIsOpen(true)} aria-label="Abrir menu">
           <IconMenu2 className="h-8 w-8" />
         </button>
+
         {isOpen && (
-          <div className="fixed inset-0 z-50 flex h-screen flex-col items-center justify-center bg-black bg-opacity-95 text-xl text-white">
-            <button onClick={() => setIsOpen(false)} className="absolute right-5 top-5">
+          <div
+            className="fixed inset-0 z-50 flex h-screen flex-col items-center justify-center bg-black bg-opacity-95 text-xl text-white"
+            role="dialog"
+            aria-modal="true"
+          >
+            <button onClick={() => setIsOpen(false)} className="absolute right-5 top-5" aria-label="Fechar menu">
               <IconX className="h-8 w-8" />
             </button>
-            {navLinks.map(({ href, title, label }) => (
+
+            {navLinks.map(({ href, title, key }) => (
               <Link
                 key={href}
                 className="py-2 hover:underline"
@@ -74,15 +85,11 @@ function Nav() {
                 title={title}
                 onClick={() => setIsOpen(false)}
               >
-                {label}
+                {t(key)}
               </Link>
             ))}
-            <div className="mt-4 flex gap-4">
-              {socialLinks.map(({ href, title, icon }) => (
-                <a key={href} href={href} title={title}>
-                  {icon}
-                </a>
-              ))}
+            <div className="mt-4">
+              <LanguageSwitcher />
             </div>
           </div>
         )}

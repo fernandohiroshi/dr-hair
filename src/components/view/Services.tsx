@@ -1,28 +1,62 @@
-import React from 'react'
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid'
 import Image from 'next/image'
 import { IconDeviceDesktop, IconDroplet, IconMedicineSyrup, IconNeedle } from '@tabler/icons-react'
 import { PiMouseLeftClickLight } from 'react-icons/pi'
+import { useTranslations } from 'next-intl'
 
 interface SkeletonProps {
   imageSrc: string
 }
 
 export function Services() {
+  const t = useTranslations('Services')
+
+  const items = [
+    {
+      title: t('fue'),
+      header: <Skeleton imageSrc="https://imgix.cosmicjs.com/783d3240-e439-11ef-8a63-eb57d6c77a36-fue.jpg" />,
+      className: 'md:col-span-2',
+      icon: <IconNeedle className="h-4 w-4 text-neutral-500" />,
+      href: '/fue',
+    },
+    {
+      title: t('prp'),
+      header: (
+        <Skeleton imageSrc="https://imgix.cosmicjs.com/b339dc60-e3c9-11ef-ab06-8dbcfab76004-Plasma-Rico-em-Plaquetas-PRP.jpg" />
+      ),
+      className: 'md:col-span-1',
+      icon: <IconDroplet className="h-4 w-4 text-neutral-500" />,
+      href: '/prp',
+    },
+    {
+      title: t('microfusao'),
+      header: (
+        <Skeleton imageSrc="https://imgix.cosmicjs.com/b33e4930-e3c9-11ef-ab06-8dbcfab76004-Microfusao-de-medicamentos---MMP.jpg" />
+      ),
+      className: 'md:col-span-1',
+      icon: <IconMedicineSyrup className="h-4 w-4 text-neutral-500" />,
+      href: '/mmp',
+    },
+    {
+      title: t('fotobiomodulacao'),
+      header: (
+        <Skeleton imageSrc="https://imgix.cosmicjs.com/18b6d400-e3dc-11ef-8a63-eb57d6c77a36-Fotobiomodulacao-a-Laser.jpg" />
+      ),
+      className: 'md:col-span-2',
+      icon: <IconDeviceDesktop className="h-4 w-4 text-neutral-500" />,
+      href: '/fotobiomodulacao',
+    },
+  ]
+
   return (
     <section id="services" className="mb-16 scroll-mt-28 md:mb-24">
-      <h2 className="mb-2 text-xl font-semibold md:text-2xl">Conheça nossos serviços</h2>
-      <p className="mb-8 max-w-2xl text-justify text-xs md:text-lg">
-        Oferecemos tratamentos capilares inovadores e minimamente invasivos para restaurar a saúde e a aparência dos
-        seus cabelos. Descubra soluções personalizadas com tecnologia de ponta para estimular o crescimento capilar e
-        fortalecer os fios.
-      </p>
+      <h2 className="mb-2 text-xl font-semibold md:text-2xl">{t('title')}</h2>
+      <p className="mb-8 max-w-2xl text-justify text-xs md:text-lg">{t('description')}</p>
       <BentoGrid className="mx-auto max-w-screen-xl auto-rows-[20rem] md:auto-rows-[28rem]">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
             title={item.title}
-            // description={item.description}
             header={item.header}
             className={item.className}
             icon={item.icon}
@@ -49,47 +83,3 @@ const Skeleton: React.FC<SkeletonProps> = ({ imageSrc }) => (
     </div>
   </div>
 )
-
-const items = [
-  {
-    title: 'Transplante (FUE)',
-    // description:
-    //   "Recupere seus cabelos com a técnica FUE, natural e minimamente invasiva.",
-    header: <Skeleton imageSrc="https://imgix.cosmicjs.com/783d3240-e439-11ef-8a63-eb57d6c77a36-fue.jpg" />,
-    className: 'md:col-span-2',
-    icon: <IconNeedle className="h-4 w-4 text-neutral-500" />,
-    href: '/fue',
-  },
-  {
-    title: 'Tratamento (PRP)',
-    // description:
-    //   "Fortalece e estimula o crescimento capilar com regeneração celular.",
-    header: (
-      <Skeleton imageSrc="https://imgix.cosmicjs.com/b339dc60-e3c9-11ef-ab06-8dbcfab76004-Plasma-Rico-em-Plaquetas-PRP.jpg" />
-    ),
-    className: 'md:col-span-1',
-    icon: <IconDroplet className="h-4 w-4 text-neutral-500" />,
-    href: '/prp',
-  },
-  {
-    title: 'Microfusao de medicamentos',
-    // description: "Nutre e fortalece os fios, estimulando a saúde capilar.",
-    header: (
-      <Skeleton imageSrc="https://imgix.cosmicjs.com/b33e4930-e3c9-11ef-ab06-8dbcfab76004-Microfusao-de-medicamentos---MMP.jpg" />
-    ),
-    className: 'md:col-span-1',
-    icon: <IconMedicineSyrup className="h-4 w-4 text-neutral-500" />,
-    href: '/mmp',
-  },
-  {
-    title: 'Fotobiomodulacao a Laser',
-    // description:
-    //   "Laser estimula o couro cabeludo e melhora a circulação para o crescimento capilar.",
-    header: (
-      <Skeleton imageSrc="https://imgix.cosmicjs.com/18b6d400-e3dc-11ef-8a63-eb57d6c77a36-Fotobiomodulacao-a-Laser.jpg" />
-    ),
-    className: 'md:col-span-2',
-    icon: <IconDeviceDesktop className="h-4 w-4 text-neutral-500" />,
-    href: '/fotobiomodulacao',
-  },
-]

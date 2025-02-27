@@ -1,8 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export const ContactForm = () => {
+  const t = useTranslations('ContactForm')
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,20 +20,19 @@ export const ContactForm = () => {
   }
 
   const validatePhone = (phone: string) => {
-    return /^\d{3,}$/.test(phone) // Aceita apenas números e no mínimo 3 dígitos
+    return /^\d{3,}$/.test(phone)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
 
-    // Validate inputs
     if (name === 'name' && value.length < 3) {
-      setErrors((prev) => ({ ...prev, name: 'O nome deve ter pelo menos 3 caracteres' }))
+      setErrors((prev) => ({ ...prev, name: t('errorName') }))
     } else if (name === 'email' && !validateEmail(value)) {
-      setErrors((prev) => ({ ...prev, email: 'Email inválido' }))
+      setErrors((prev) => ({ ...prev, email: t('errorEmail') }))
     } else if (name === 'phone' && !validatePhone(value)) {
-      setErrors((prev) => ({ ...prev, phone: 'Formato inválido. Ex: (11) 91234-5678' }))
+      setErrors((prev) => ({ ...prev, phone: t('errorPhone') }))
     } else {
       setErrors((prev) => ({ ...prev, [name]: '' }))
     }
@@ -38,7 +40,7 @@ export const ContactForm = () => {
 
   const handleSubmit = () => {
     if (Object.values(errors).some((error) => error) || Object.values(formData).some((field) => !field)) {
-      alert('Por favor, preencha os campos corretamente antes de enviar.')
+      alert(t('formAlert'))
       return
     }
 
@@ -54,18 +56,14 @@ export const ContactForm = () => {
       id="form"
     >
       <div>
-        <h2 className="text-md mb-1 animate-pulse font-semibold md:text-2xl">Entre em contato e garanta sua vaga</h2>
-        <p className="max-w-lg text-xs md:text-sm">
-          {' '}
-          Expanda seu conhecimento e destaque-se na estética avançada! Inscreva-se agora e dê o próximo passo na sua
-          carreira.
-        </p>
+        <h2 className="text-md mb-1 animate-pulse font-semibold md:text-2xl">{t('title')}</h2>
+        <p className="max-w-lg text-xs md:text-sm">{t('description')}</p>
       </div>
       <input
         className="p-2 outline-none"
         type="text"
         name="name"
-        placeholder="Nome"
+        placeholder={t('namePlaceholder')}
         value={formData.name}
         onChange={handleChange}
       />
@@ -74,7 +72,7 @@ export const ContactForm = () => {
         className="p-2 outline-none"
         type="email"
         name="email"
-        placeholder="Email"
+        placeholder={t('emailPlaceholder')}
         value={formData.email}
         onChange={handleChange}
       />
@@ -83,13 +81,13 @@ export const ContactForm = () => {
         className="p-2 outline-none"
         type="tel"
         name="phone"
-        placeholder="(45) 91234-5678"
+        placeholder={t('phonePlaceholder')}
         value={formData.phone}
         onChange={handleChange}
       />
       {errors.phone && <p className="animate-pulse text-red-800">{errors.phone}</p>}
       <div>
-        <p className="mb-2 font-semibold">Você é médico?</p>
+        <p className="mb-2 font-semibold">{t('doctorQuestion')}</p>
         <label className="mr-4">
           <input
             type="radio"
@@ -115,7 +113,7 @@ export const ContactForm = () => {
       </div>
       <textarea
         name="message"
-        placeholder="Envie uma mensagem também"
+        placeholder={t('messagePlaceholder')}
         value={formData.message}
         onChange={handleChange}
         className="resize-none p-2 outline-none"
@@ -127,7 +125,7 @@ export const ContactForm = () => {
           onClick={handleSubmit}
           disabled={Object.values(errors).some((error) => error)}
         >
-          Enviar
+          {t('submitButton')}
         </button>
       </div>
     </div>

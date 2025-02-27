@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/view/Header'
 import Footer from '@/components/view/Footer'
 import { IoLogoWhatsapp } from 'react-icons/io'
+import { routing } from '@/i18n/routing'
+import { notFound } from 'next/navigation'
+import { getMessages } from 'next-intl/server'
 
 const M = Montserrat({
   subsets: ['latin'],
@@ -63,28 +67,41 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode
-}>) {
+  params: { locale: string }
+}) {
+  const { locale } = await params
+
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound()
+  }
+
+  const messages = await getMessages()
+
   return (
-    <html lang="pt_BR" suppressHydrationWarning className="!scroll-smooth">
-      <body className={`${M.className} antialiased`}>
-        <Header />
-        {children}
-        <Footer />
-        <a
-          href="https://wa.me/5545991280101"
-          title="Fale conosco!"
-          className="fixed bottom-4 right-4 rounded-2xl border border-emerald-500/40 bg-emerald-500 px-4 py-2 text-center text-white backdrop-blur-sm duration-300 ease-in-out hover:bg-emerald-400"
-        >
-          <span className="flex items-center gap-4 text-xs font-semibold md:text-base">
-            <IoLogoWhatsapp size={40} />
-          </span>
-          <div className="absolute inset-x-0 -bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-emerald-400 to-transparent" />
-        </a>
-      </body>
+    <html lang={locale} suppressHydrationWarning className="!scroll-smooth">
+      <NextIntlClientProvider messages={messages}>
+        <body className={`${M.className} antialiased`}>
+          <Header />
+          {children}
+          <Footer />
+          <a
+            href="https://wa.me/5545991280101"
+            title="Fale conosco!"
+            className="fixed bottom-4 right-4 rounded-2xl border border-emerald-500/40 bg-emerald-500 px-4 py-2 text-center text-white backdrop-blur-sm duration-300 ease-in-out hover:bg-emerald-400"
+          >
+            <span className="flex items-center gap-4 text-xs font-semibold md:text-base">
+              <IoLogoWhatsapp size={40} />
+            </span>
+            <div className="absolute inset-x-0 -bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-emerald-400 to-transparent" />
+          </a>
+        </body>
+      </NextIntlClientProvider>
     </html>
   )
 }

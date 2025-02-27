@@ -1,5 +1,6 @@
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => {
   return <div className={cn('mx-auto grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-3', className)}>{children}</div>
@@ -20,10 +21,12 @@ export const BentoGridItem = ({
   icon?: React.ReactNode
   href?: string
 }) => {
+  const t = useTranslations('Services')
+
   return (
     <Link
       href={href || '#'}
-      title="Saiba mais!"
+      title={t('saibaMais')}
       passHref
       className={cn(
         'group/bento row-span-1 flex flex-col justify-between space-y-4 rounded-xl bg-stone-50/40 p-2 shadow-md transition duration-300 ease-in-out hover:bg-stone-50/80 hover:shadow-xl md:p-4',

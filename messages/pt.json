@@ -1,0 +1,348 @@
+{
+  "Hero": {
+    "title": "Recupere Sua Confiança com DR Hair",
+    "description": "Transplante capilar natural e definitivo.",
+    "mobileTitle": "Recupere Sua Confiança com DR Hair",
+    "mobileDescription": "Transplantes capilares naturais e duradouros.",
+    "immerseTitle": "IMERSÃO F.U.E.",
+    "immerseDescription": "Curso de Transplante Capilar"
+  },
+
+  "Nav": {
+    "home": "Home",
+    "services": "Serviços",
+    "clinics": "Clínica",
+    "beforeAfter": "Antes e Depois",
+    "courses": "Cursos",
+    "contact": "Contato",
+    "languagePortuguese": "Português",
+    "languageSpanish": "Espanhol"
+  },
+
+  "Services": {
+    "title": "Conheça nossos serviços",
+    "description": "Oferecemos tratamentos capilares inovadores e minimamente invasivos para restaurar a saúde e a aparência dos seus cabelos. Descubra soluções personalizadas com tecnologia avançada para estimular o crescimento capilar e fortalecer os fios.",
+    "fue": "Transplante (FUE)",
+    "prp": "Tratamento (PRP)",
+    "microfusao": "Microfusão de medicamentos",
+    "fotobiomodulacao": "Fotobiomodulação com laser",
+    "saibaMais": "Saiba mais!"
+  },
+
+  "Clinic": {
+    "title": "Venha conhecer nossa clínica",
+    "description": "Nossa clínica oferece um ambiente moderno e acolhedor, onde você recebe atendimento especializado e personalizado. Agende uma visita e descubra como podemos transformar sua autoestima!",
+    "address": "🔹Avenida 33, Hernandarias, Paraguai",
+    "googleMap": "Google Map"
+  },
+
+  "Footer": {
+    "services": "Nossos Serviços",
+    "contact": "Fale Conosco",
+    "whatsapp": "Whatsapp",
+    "email": "E-Mail",
+    "instagram": "Instagram",
+    "backToHome": "Voltar para Home",
+    "copyright": "© {year} DR Hair. Todos os direitos reservados. Desenvolvido por",
+    "servicesLinks": {
+      "fue": "Transplante Fue",
+      "prp": "Plasma Rico Plaquetas",
+      "fotobiomodulacao": "Fotobiomodulação a Laser",
+      "mmp": "Microinfusão de Medicamentos"
+    }
+  },
+
+  "FueSection1": {
+    "title": "IMERSÃO F.U.E. - MÉTODO EXCLUSIVO",
+    "subtitle": "MÉDICO, DOMINE TÉCNICAS AVANÇADAS EM TRANSPLANTE CAPILAR, SOBRANCELHA E BARBA!",
+    "description": "Aprenda na prática, do início ao fim, e se destaque em uma área lucrativa e de alta demanda. Exclusivo para médicos que querem elevar sua carreira a um novo patamar!",
+    "hours": "60H DE APRENDIZADO"
+  },
+
+  "FueSection2": {
+    "title": "IMERSÃO F.U.E. – A Arte e a Ciência do Implante Capilar",
+    "description": "Uma experiência exclusiva para médicos que desejam dominar a técnica F.U.E. com precisão e excelência. Nossa imersão proporciona aprendizado prático e imersivo, com focos cirúrgicos essenciais:",
+    "focus": {
+      "male": "Alopecia Masculina – Técnicas avançadas para restauração capilar eficaz.",
+      "female": "Alopecia Feminina – Abordagens refinadas para resultados naturais e harmoniosos.",
+      "eyebrow": "Transplante de Sobrancelhas – Redefinição estética com precisão e delicadeza.",
+      "beard": "Transplante de Barba – Construção e aprimoramento do contorno facial."
+    },
+    "callToAction": "Aprenda com especialistas, transforme sua carreira e conquiste um mercado em ascensão!"
+  },
+
+  "FueSection3": {
+    "title": "IMERSÃO F.U.E. – Hands-On Exclusivo",
+    "description": "Uma jornada transformadora para médicos que desejam dominar o transplante capilar com excelência. Nosso programa é estruturado em cinco dias intensivos, combinando teoria, prática e inovação.",
+    "schedule": {
+      "day1_2": "🗓️ Dia 1 e 2 – Base teórica aprofundada: fundamentos, técnicas, discussão de casos e esclarecimento de dúvidas.",
+      "day2_bonus": "🗓️ Dia 2 – Super Bônus: Imersão prática e aprofundamento técnico com Terapias Avançadas.",
+      "day3": "🗓️ Dia 3 – Imersão prática no Transplante Capilar: aplicação prática dos alunos sob a supervisão do Dr. Ediney Galvão.",
+      "day4": "🗓️ Dia 4 – Imersão prática no Transplante de Sobrancelhas: aplicação prática dos alunos sob a supervisão do Dr. Ediney Galvão.",
+      "day5": "🗓️ Dia 5 – Imersão prática no Transplante de Barba: aplicação prática dos alunos sob a supervisão do Dr. Ediney Galvão."
+    },
+    "callToAction": "Uma experiência única para elevar sua expertise e conquistar um mercado em plena expansão!"
+  },
+
+  "FueSection4": {
+    "title": "CRONOGRAMA – IMERSÃO F.U.E.",
+    "schedule": [
+      {
+        "title": "Dia 1 - Teórico",
+        "activities": [
+          "🔹 Calvície Masculina e Feminina – Como explicar para o paciente sobre seu grau de alopecia e opções de tratamento.",
+          "🔹 Tratamentos Clínicos – Estratégias para adesão ao tratamento e fidelização do paciente.",
+          "🔹 Anatomia do Folículo Piloso – Entendimento essencial para um transplante preciso.",
+          "🔹 Consulta Especializada – Abordagem clínica sobre calvície e restauração capilar.",
+          "🔹 Definição de Expectativas – Como alinhar resultados realistas e satisfatórios."
+        ]
+      },
+      {
+        "title": "Dia 2 - Teórico e Prático",
+        "activities": [
+          "🔹 Técnica F.U.E. – Fundamentos e Precisão – Compreenda os pilares dessa técnica inovadora e seus diferenciais.",
+          "🔹 Implantação Capilar – Passo a passo para resultados naturais, duradouros e personalizados.",
+          "🔹 Implanters x Pré-Incision – Como escolher a abordagem mais eficaz e começar com segurança.",
+          "🔹 Plano Cirúrgico Estratégico – Uma metodologia simples, eficaz e adaptável a cada caso."
+        ],
+        "bonus": "Super Bônus: Terapias Avançadas – PRP, MMP, Fotobiomodulação a LASER e Ozonioterapia. Transforme sua prática com conhecimento profundo e técnicas avançadas para se destacar no mercado de transplante capilar!"
+      },
+      {
+        "title": "Dia 3 - Transplante Capilar Masculino",
+        "activities": [
+          "🔹 Abordagem e Preparo do Paciente – Como conduzir a consulta, definir expectativas e preparar o paciente para o procedimento.",
+          "🔹 Montagem da Sala Cirúrgica – Organização estratégica para eficiência e segurança.",
+          "🔹 Disposição da Equipe – Coordenação e fluxo cirúrgico para otimizar o procedimento.",
+          "🔹 Anestesia Prática – Aplicação de anestesia tumescente e bloqueios para conforto do paciente.",
+          "🔹 Raciocínio Cirúrgico e Programação – Estratégia para extração e distribuição dos folículos.",
+          "🔹 Procedimento Hands-On – Os alunos realizarão o transplante sob supervisão de um médico altamente experiente."
+        ]
+      },
+      {
+        "title": "Dia 4 - Transplante de Sobrancelhas",
+        "activities": [
+          "🔹 Arte e Técnica do Design – Como desenhar sobrancelhas harmoniosas e naturais, respeitando a anatomia facial.",
+          "🔹 Prática Cirúrgica Avançada – Os alunos realizarão o transplante sob a supervisão de um médico experiente, garantindo aprendizado real e seguro.",
+          "🔹 Acompanhamento Pós-Operatório – Técnicas para avaliação, remoção de curativo e cuidados pós-operatórios."
+        ]
+      },
+      {
+        "title": "Dia 5 - Transplante de Barba",
+        "activities": [
+          "🔹 Design Personalizado – Aprenda a desenhar uma barba harmoniosa, respeitando os princípios do visagismo e a anatomia facial.",
+          "🔹 Prática Cirúrgica Avançada – Realização do procedimento pelos alunos, sob a supervisão de um médico especialista.",
+          "🔹 Acompanhamento Pós-Operatório – Cuidados essenciais, manejo de curativos e orientações pós-operatórias para o sucesso do transplante."
+        ]
+      },
+      {
+        "title": "Encerramento & Entrega de Certificados",
+        "activities": [
+          "Celebramos o fechamento dessa jornada transformadora com a certificação oficial, marcando o início de uma nova fase na sua carreira médica. Torne-se um especialista desejado no mercado e ofereça resultados excepcionais aos seus pacientes!"
+        ]
+      }
+    ]
+  },
+
+  "ImersaoFUE": {
+    "title": "Garanta sua vaga agora!",
+    "cta": "Fazer inscrição"
+  },
+
+  "ContactForm": {
+    "title": "Entre em contato e garanta sua vaga",
+    "description": "Expanda seu conhecimento e destaque-se na estética avançada! Inscreva-se agora e dê o próximo passo na sua carreira.",
+    "namePlaceholder": "Nome",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "(45) 91234-5678",
+    "messagePlaceholder": "Envie uma mensagem também",
+    "doctorQuestion": "Você é médico?",
+    "submitButton": "Enviar",
+    "errorName": "O nome deve ter pelo menos 3 caracteres",
+    "errorEmail": "Email inválido",
+    "errorPhone": "Formato inválido. Ex: (11) 91234-5678",
+    "formAlert": "Por favor, preencha os campos corretamente antes de enviar."
+  },
+
+  "CursoPage": {
+    "title": "Cursos de Estética Avançada",
+    "description": "Aprimore suas técnicas com especialistas e expanda suas oportunidades no mercado.",
+    "imageAlt": "Imagem ilustrativa dos cursos oferecidos",
+    "timelineTitle": "Conheça nossos serviços",
+    "timelineDescription": "Oferecemos tratamentos capilares inovadores para restaurar a saúde e a aparência dos seus cabelos, estimulando o crescimento e fortalecendo os fios.",
+    "sections": {
+      "introduction": {
+        "title": "Aprenda e Transforme sua Carreira!",
+        "content": "A área da estética avançada está em constante crescimento, e a especialização é a chave para o sucesso! Na Clínica Dr. Hair, oferecemos cursos exclusivos para profissionais da saúde que desejam aprimorar suas técnicas e expandir suas oportunidades no mercado."
+      },
+      "courses": {
+        "title": "Nossos Cursos",
+        "botox": "Curso de Toxina Botulínica (Botox®) – Aprenda as técnicas mais avançadas para aplicação segura e eficaz da toxina botulínica, proporcionando rejuvenescimento facial com naturalidade.",
+        "signals_removal": "Curso de Retirada Estética de Sinais – Capacitação prática para remoção segura de sinais e lesões benignas, utilizando técnicas minimamente invasivas.",
+        "peeling": "Curso de Peeling Rose de MER – Domine a aplicação deste peeling inovador, feito com minerais exclusivos do Mar Morto de Israel."
+      },
+      "why_choose_us": {
+        "title": "Por que escolher nossos cursos?",
+        "advantages": [
+          "Aulas teóricas e práticas com pacientes reais",
+          "Certificação reconhecida",
+          "Material didático completo",
+          "Suporte pós-curso para dúvidas e aperfeiçoamento"
+        ]
+      }
+    }
+  },
+
+  "AntesEDepoisPage": {
+    "timelineTitle": "Antes e Depois",
+    "timelineDescription": "Veja os resultados reais dos nossos pacientes que realizaram o transplante capilar.",
+    "sections": {
+      "transformation_title": "Sua Transformação Começa Aqui",
+      "transformation_content": "A queda de cabelo pode afetar não apenas a aparência, mas também a autoestima e a confiança. O transplante capilar é a solução definitiva para recuperar fios naturais e um visual rejuvenescido.",
+      "concern_title": "Muitas pessoas chegam à nossa clínica preocupadas com a rarefação capilar, entradas acentuadas ou calvície avançada.",
+      "concern_content": "A insegurança com a aparência pode impactar desde a vida social até o desempenho profissional.",
+      "procedure_title": "Com a técnica avançada de transplante capilar FUE, os fios são implantados estrategicamente para um resultado natural e definitivo.",
+      "procedure_content": "Após alguns meses, o cabelo cresce com força e densidade, proporcionando um visual mais jovem e harmonioso. Aqui na Dr. Hair, acompanhamos de perto cada paciente para garantir um procedimento seguro e resultados surpreendentes.",
+      "before_after_title": "Antes e Depois",
+      "before_after_content": "Confira nossas fotos de antes e depois e veja como podemos transformar sua autoestima!",
+      "schedule_assessment_title": "Agende sua Avaliação",
+      "schedule_assessment_content": "Quer saber se o transplante capilar é para você? Agende uma avaliação e dê o primeiro passo para sua transformação!"
+    }
+  },
+
+  "FotobiomodulacaoPage": {
+    "timelineTitle": "Fotobiomodulação Capilar",
+    "timelineDescription": "Entenda os benefícios da fotobiomodulação para o tratamento capilar e como ela pode ajudar na recuperação e crescimento dos fios.",
+    "sections": {
+      "benefits_title": "Benefícios do Tratamento",
+      "benefits_description": [
+        "Estimula a atividade celular",
+        "Promove reparação e regeneração tecidual",
+        "Acelera crescimento, espessamento e fortalecimento capilar",
+        "Aumenta energia disponível para as células do cabelo"
+      ],
+      "efficacy_title": "Eficácia Comprovada",
+      "efficacy_description": "O laser de baixa potência é uma tecnologia aprovada e com comprovação científica para o tratamento capilar. Além da calvície e da queda de cabelos, o laser pode ser aplicado após o transplante capilar, auxiliando na cicatrização, regeneração e desenvolvimento dos fios transplantados.",
+      "circulation_title": "Melhoria na Circulação",
+      "circulation_description": [
+        "Aumento da irrigação sanguínea do couro cabeludo",
+        "O laser capilar induz a liberação do óxido nítrico, aumentando a dilatação dos vasos sanguíneos",
+        "A melhora do fluxo sanguíneo nutre e ativa os folículos capilares, promovendo a saúde capilar"
+      ],
+      "custom_protocol_title": "Protocolo Exclusivo Dr. Hair",
+      "custom_protocol_description": [
+        "Queda capilar, cabelos ralos e fracos (folículos ativos no local)",
+        "Pós-transplante capilar",
+        "Aplicações semanais/mensais",
+        "Aplicação no couro cabeludo (indolor)",
+        "Mínimo de 3 sessões",
+        "Sessões de manutenção semestrais",
+        "Home-care: tônicos capilares e polivitamínicos (personalizado)",
+        "Tratamentos auxiliares: intradermoterapia, PRP, carboxiterapia, ozonioterapia, microagulhamento, MMP"
+      ]
+    }
+  },
+
+  "FuePage": {
+    "sections": {
+      "transplant_title": "Transplante Capilar FUE",
+      "transplant_description": {
+        "0": "O Transplante Capilar FUE é uma solução definitiva para a calvície, utilizando tecnologia avançada para restaurar os cabelos com naturalidade.",
+        "1": "Minimamente invasivo, sem cicatrizes lineares;",
+        "2": "Recuperação rápida e sem necessidade de internação;",
+        "3": "Resultados naturais e duradouros."
+      },
+      "transplant_badge": "Recupere sua confiança!",
+      "how_it_is_done_title": "Como é realizado?",
+      "how_it_is_done_description": {
+        "0": "O procedimento é feito sob anestesia local;",
+        "1": "Os folículos são extraídos um a um da área doadora;",
+        "2": "Os fios são implantados na região receptora de forma estratégica;",
+        "3": "A recuperação é rápida, com fechamento das microincisões em poucos dias."
+      },
+      "how_it_is_done_badge": "Entenda o processo",
+      "choose_safely_title": "Escolha com segurança",
+      "choose_safely_description": {
+        "0": "O sucesso do transplante depende da experiência do cirurgião e do cuidado em cada etapa do procedimento. Garantimos:",
+        "1": "Técnica avançada e precisa;",
+        "2": "Acompanhamento médico completo;",
+        "3": "Equipe altamente qualificada.",
+        "4": "Recupere sua autoestima com um tratamento seguro e eficaz. Agende sua consulta!"
+      },
+      "choose_safely_badge": "Cuidado e experiência"
+    }
+  },
+
+  "MmpPage": {
+    "sections": {
+      "mmp_title": "MMP - Microinfusão de Medicamentos na Pele",
+      "mmp_description": {
+        "0": "O MMP capilar, também conhecido como Microinfusão de Medicamentos na Pele, é um procedimento inovador que vem ganhando destaque no tratamento da queda de cabelo e outros problemas capilares.",
+        "1": "Ele consiste na aplicação direta de medicamentos no couro cabeludo, de forma precisa e controlada, visando estimular o crescimento capilar e melhorar a saúde do couro cabeludo."
+      },
+      "mmp_badge": "Tratamento Avançado",
+      "how_mmp_works_title": "Como funciona o MMP capilar?",
+      "how_mmp_works_description": {
+        "0": "O MMP capilar é realizado com um dispositivo especial com microagulhas, permitindo a aplicação precisa dos medicamentos.",
+        "1": "Os medicamentos aplicados estimulam os folículos capilares, promovendo o crescimento de novos fios e fortalecendo os fios existentes.",
+        "2": "Equilibra a produção de sebo, reduz inflamações e melhora a saúde do couro cabeludo.",
+        "3": "Oferece resultados naturais sem efeitos colaterais sistêmicos."
+      },
+      "how_mmp_works_badge": "Benefícios do MMP",
+      "exclusive_protocol_title": "Protocolo exclusivo Dr. Hair",
+      "exclusive_protocol_description": {
+        "0": "Indicado para queda capilar, cabelos ralos e fracos.",
+        "1": "Pós-transplante capilar.",
+        "2": "Aplicações semanais ou mensais.",
+        "3": "Aplicação indolor no couro cabeludo.",
+        "4": "Mínimo de 3 sessões.",
+        "5": "Sessões de manutenção semestrais.",
+        "6": "Home-care: tônicos capilares e polivitamínicos personalizados.",
+        "7": "Tratamentos auxiliares: intradermoterapia, PRP, ozonioterapia, microagulhamento."
+      },
+      "exclusive_protocol_badge": "Cuidados e Tratamentos"
+    }
+  },
+
+  "PrpPage": {
+    "sections": {
+      "prp_title": "PRP - Plasma Rico em Plaquetas",
+      "prp_description": {
+        "0": "O PRP é um tratamento inovador que utiliza alta concentração de plaquetas em um volume mínimo de plasma para estimular o crescimento capilar.",
+        "1": "O processo envolve a centrifugação do sangue, separando os fatores de crescimento essenciais para a regeneração capilar."
+      },
+      "prp_badge": "Revitalize seus cabelos!",
+      "growth_factors_title": "Fatores de Crescimento",
+      "growth_factors_description": {
+        "0": "Os fatores de crescimento são substâncias fundamentais para estimular o crescimento dos cabelos. Entre os mais importantes estão:",
+        "1": "Fator de Crescimento Transformador Beta (TGF-B);",
+        "2": "Fator de Crescimento Derivado das Plaquetas (PDGF);",
+        "3": "Fatores de Crescimento Neural (NGF);",
+        "4": "Fator de Crescimento Semelhante à Insulina (IGF);",
+        "5": "Fator de Crescimento Epidérmico (EGF)."
+      },
+      "growth_factors_badge": "Ciência e inovação",
+      "exclusive_protocol_title": "Protocolo Exclusivo Dr. Hair",
+      "exclusive_protocol_description": {
+        "0": "O PRP é indicado para queda capilar, cabelos ralos e fracos, desde que haja folículos ativos na região.",
+        "1": "Aplicações mensais;",
+        "2": "Aplicação intradérmica com agulha 30G ou 32G;",
+        "3": "Mínimo de 3 sessões;",
+        "4": "Sessões de manutenção semestrais;",
+        "5": "Uso de 4 a 6 ml de PRP por sessão;",
+        "6": "Home-care: tônicos capilares e polivitamínicos personalizados;",
+        "7": "Tratamentos auxiliares: intradermoterapia, laser de baixa potência, carboxiterapia, ozonioterapia, microagulhamento e MMP."
+      },
+      "exclusive_protocol_badge": "Tratamento personalizado"
+    }
+  },
+
+  "AssessmentBtn": {
+    "buttonTitle": "Clique aqui",
+    "buttonText": "Agendar"
+  },
+
+  "ServicesBtn": {
+    "buttonTitle": "Haz clic aquí",
+    "buttonText": "Ver otros servicios"
+  }
+}
