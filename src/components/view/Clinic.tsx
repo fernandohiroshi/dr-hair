@@ -24,16 +24,16 @@ export function Clinic() {
     <section className="scroll-mt-28 md:px-4" id="clinics">
       <div className="mb-8 md:mb-16">
         <h2 className="mb-2 text-xl font-semibold md:text-2xl">{t('title')}</h2>
-        <p className="max-w-2xl text-justify text-sm md:text-lg">{t('description')}</p>
+        <p className="max-w-2xl text-justify text-xs md:text-sm lg:text-lg">{t('description')}</p>
       </div>
 
       <div className="mb-8 flex flex-col gap-1">
-        <h3 className="text-lg md:text-xl">{t('address')}</h3>
+        <h3 className="lg;text-lg text-sm md:text-base">{t('address')}</h3>
 
         <a
           href="https://maps.app.goo.gl/mx9HA18hSStDPDLp6"
           title="Google Map"
-          className="ml-2 text-sm text-red-900 duration-300 ease-in-out hover:underline md:text-lg"
+          className="ml-2 text-sm text-red-900 duration-300 ease-in-out hover:underline lg:text-lg"
         >
           {t('googleMap')}
         </a>
