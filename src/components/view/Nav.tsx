@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { IconMenu2, IconX } from '@tabler/icons-react'
 import { Link } from '@/i18n/routing'
 import Image from 'next/image'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 const navLinks = [
   { href: '/', title: 'home', key: 'home' },
@@ -14,31 +15,6 @@ const navLinks = [
   { href: '/cursos', title: 'courses', key: 'courses' },
   { href: '#contact', title: 'contact', key: 'contact' },
 ]
-
-const LanguageSwitcher = () => {
-  return (
-    <div className="flex items-center gap-2 md:gap-3">
-      <Link href="/" locale="pt">
-        <Image
-          src="/brasilia.png"
-          alt="Português"
-          width={32}
-          height={32}
-          className="rounded-full border duration-100 ease-in-out hover:scale-110 hover:brightness-110"
-        />
-      </Link>
-      <Link href="/" locale="es">
-        <Image
-          src="/paraguai.png"
-          alt="Español"
-          width={32}
-          height={32}
-          className="rounded-full border duration-100 ease-in-out hover:scale-110 hover:brightness-110"
-        />
-      </Link>
-    </div>
-  )
-}
 
 const Nav = () => {
   const t = useTranslations('Nav')

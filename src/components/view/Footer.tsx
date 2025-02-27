@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
-import logo from '../../../public/logo.jpeg'
+import { IconBrandWhatsapp, IconMail, IconBrandInstagram } from '@tabler/icons-react'
 
 const servicesLinks = [
   { href: '/fue', label: 'fue' },
@@ -13,12 +13,9 @@ const servicesLinks = [
 ]
 
 const contactLinks = [
-  { href: 'https://wa.me/5545991280101', label: 'Whatsapp' },
-  { href: 'mailto:drhairtransplantecapilar@gmail.com', label: 'E-Mail' },
-  {
-    href: 'https://www.instagram.com/drhairtransplantecapilar/',
-    label: 'Instagram',
-  },
+  { href: 'https://wa.me/5545991280101', label: 'Whatsapp', icon: IconBrandWhatsapp },
+  { href: 'https://www.instagram.com/drhairtransplantecapilar/', label: 'Instagram', icon: IconBrandInstagram },
+  { href: 'mailto:drhairtransplantecapilar@gmail.com', label: 'E-Mail', icon: IconMail },
 ]
 
 function Footer() {
@@ -38,8 +35,13 @@ function Footer() {
 
         <div className="flex flex-col gap-2 text-justify tracking-wider">
           <h3 className="text-xl font-semibold md:mb-2">{t('contact')}</h3>
-          {contactLinks.map(({ href, label }) => (
-            <a key={href} href={href} className="text-sm duration-500 ease-in-out hover:underline md:text-base">
+          {contactLinks.map(({ href, label, icon: Icon }) => (
+            <a
+              key={href}
+              href={href}
+              className="flex items-center gap-2 text-sm duration-500 ease-in-out hover:underline md:text-base"
+            >
+              <Icon size={20} />
               {label}
             </a>
           ))}
@@ -51,7 +53,7 @@ function Footer() {
           className="flex items-center justify-center duration-500 ease-in-out hover:scale-90"
         >
           <Image
-            src={logo}
+            src="/logo.jpeg"
             alt="Dr Hair Transplante Capilar"
             width={200}
             height={200}

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Timeline } from '@/components/ui/timeline'
 import ImersaoFUE from '@/components/view/imersaoFueSections/ImersaoFue'
-import { ContactForm } from '@/components/view/Form'
+import { ContactForm } from '@/components/view/form/Form'
 import { useTranslations } from 'next-intl'
 
 export default function CursoPage() {

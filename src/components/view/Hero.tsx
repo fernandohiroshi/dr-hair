@@ -8,7 +8,6 @@ import { useTranslations } from 'next-intl'
 export function Hero() {
   const t = useTranslations('Hero')
 
-  // Dados das imagens
   const images = [
     'https://imgix.cosmicjs.com/1bbd26b0-eaa1-11ef-a238-c1ad09f4b1ad-h01.jpeg',
     'https://imgix.cosmicjs.com/1bbead50-eaa1-11ef-a238-c1ad09f4b1ad-h02.jpeg',
