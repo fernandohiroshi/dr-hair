@@ -1,7 +1,7 @@
 import { Hero } from '@/components/view/Hero'
 import { Services } from '@/components/view/Services'
 import { Clinic } from '@/components/view/Clinic'
-import About from '@/components/view/About'
+import { About } from '@/components/view/About'
 
 export default function Home() {
   return (

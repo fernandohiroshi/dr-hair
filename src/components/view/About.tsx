@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl'
 
-const About = () => {
+export const About = () => {
   const t = useTranslations('About')
 
   return (
@@ -38,5 +38,3 @@ const About = () => {
     </section>
   )
 }
-
-export default About

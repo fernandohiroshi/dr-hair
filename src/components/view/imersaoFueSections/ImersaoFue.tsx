@@ -1,11 +1,11 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import FueSection1 from './sections/fue-section1'
-import FueSection2 from './sections/fue-section2'
-import FueSection3 from './sections/fue-section3'
-import FueSection4 from './sections/fue-section4'
+import { FueSection1 } from './sections/fue-section1'
+import { FueSection2 } from './sections/fue-section2'
+import { FueSection3 } from './sections/fue-section3'
+import { FueSection4 } from './sections/fue-section4'
 
-export default function ImersaoFUE() {
+export const ImersaoFUE = () => {
   const t = useTranslations('ImersaoFUE')
 
   return (

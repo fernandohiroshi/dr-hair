@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Timeline } from '@/components/ui/timeline'
-import AssessmentBtn from '@/components/view/AssessmentBtn'
 import { useTranslations } from 'next-intl'
+import { AssessmentBtn } from '@/components/view/AssessmentBtn'
 
 export default function AntesEDepoisPage() {
   const t = useTranslations('AntesEDepoisPage')

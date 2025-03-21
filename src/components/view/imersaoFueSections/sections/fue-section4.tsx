@@ -6,7 +6,7 @@ interface DaySchedule {
   bonus?: string
 }
 
-function FueSection4() {
+export const FueSection4 = () => {
   const t = useTranslations('FueSection4')
   const schedule: DaySchedule[] = t.raw('schedule') // Tipando 'schedule' como DaySchedule[]
 
@@ -34,5 +34,3 @@ function FueSection4() {
     </div>
   )
 }
-
-export default FueSection4

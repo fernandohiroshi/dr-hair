@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
-function FueSection1() {
+export const FueSection1 = () => {
   const t = useTranslations('FueSection1')
 
   return (
@@ -33,5 +33,3 @@ function FueSection1() {
     </section>
   )
 }
-
-export default FueSection1

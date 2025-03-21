@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import { useTranslations } from 'next-intl'
 
-function AssessmentBtn() {
+export const AssessmentBtn = () => {
   const t = useTranslations('AssessmentBtn')
 
   return (
@@ -14,5 +14,3 @@ function AssessmentBtn() {
     </Link>
   )
 }
-
-export default AssessmentBtn

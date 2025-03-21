@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-function FueSection3() {
+export const FueSection3 = () => {
   const t = useTranslations('FueSection3')
 
   return (
@@ -33,5 +33,3 @@ function FueSection3() {
     </section>
   )
 }
-
-export default FueSection3

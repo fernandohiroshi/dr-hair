@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { TracingBeam } from '@/components/ui/tracing-beam'
-import ServicesBtn from '@/components/view/ServicesBtn'
 import { useTranslations } from 'next-intl'
+import { ServicesBtn } from '@/components/view/ServicesBtn'
 
 export default function FotobiomodulacaoPage() {
   const t = useTranslations('FotobiomodulacaoPage')
