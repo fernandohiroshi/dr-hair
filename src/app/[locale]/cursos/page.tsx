@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import { Timeline } from '@/components/ui/timeline'
-import ImersaoFUE from '@/components/view/imersaoFueSections/ImersaoFue'
+
 import { ContactForm } from '@/components/view/form/Form'
 import { useTranslations } from 'next-intl'
+import { ImersaoFUE } from '@/components/view/imersaoFueSections/ImersaoFue'
 
 export default function CursoPage() {
   const t = useTranslations('CursoPage')
