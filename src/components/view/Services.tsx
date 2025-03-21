@@ -8,7 +8,7 @@ interface SkeletonProps {
   imageSrc: string
 }
 
-export function Services() {
+export const Services = () => {
   const t = useTranslations('Services')
 
   const items = [

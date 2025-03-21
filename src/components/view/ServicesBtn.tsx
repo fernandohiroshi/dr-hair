@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
-function ServicesBtn() {
+export const ServicesBtn = () => {
   const t = useTranslations('ServicesBtn')
 
   return (
@@ -12,5 +12,3 @@ function ServicesBtn() {
     </Link>
   )
 }
-
-export default ServicesBtn

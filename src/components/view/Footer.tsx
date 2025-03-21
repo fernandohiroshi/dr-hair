@@ -18,7 +18,7 @@ const contactLinks = [
   { href: 'mailto:drhairtransplantecapilar@gmail.com', label: 'E-Mail', icon: IconMail },
 ]
 
-function Footer() {
+export const Footer = () => {
   const t = useTranslations('Footer')
 
   return (
@@ -78,5 +78,3 @@ function Footer() {
     </footer>
   )
 }
-
-export default Footer

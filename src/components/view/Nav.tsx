@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { IconMenu2, IconX } from '@tabler/icons-react'
 import { Link } from '@/i18n/routing'
-import Image from 'next/image'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
 const navLinks = [
@@ -16,7 +15,7 @@ const navLinks = [
   { href: '#contact', title: 'contact', key: 'contact' },
 ]
 
-const Nav = () => {
+export const Nav = () => {
   const t = useTranslations('Nav')
   const [isOpen, setIsOpen] = useState(false)
 
@@ -73,5 +72,3 @@ const Nav = () => {
     </>
   )
 }
-
-export default Nav

@@ -1,5 +1,5 @@
 import { Link } from '@/i18n/routing'
-import Nav from './Nav'
+import { Nav } from './Nav'
 
 export function Header() {
   return (

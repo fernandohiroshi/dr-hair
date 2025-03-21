@@ -5,7 +5,7 @@ import { ImagesSlider } from '@/components/ui/images-slider'
 import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 
-export function Hero() {
+export const Hero = () => {
   const t = useTranslations('Hero')
 
   const images = [

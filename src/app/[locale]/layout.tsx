@@ -3,11 +3,11 @@ import { NextIntlClientProvider } from 'next-intl'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/view/Header'
-import Footer from '@/components/view/Footer'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { getMessages } from 'next-intl/server'
 import { WhatsAppButton } from '@/components/view/WhatsappBtn'
+import { Footer } from '@/components/view/Footer'
 
 const M = Montserrat({
   subsets: ['latin'],
@@ -15,7 +15,7 @@ const M = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'DR Hair - Transplante Capilar e Tratamentos para Queda de Cabelo',
+  title: 'DR Hair',
   description:
     'Especialistas em transplante capilar FUE e tratamentos para queda de cabelo, como PRP, laser de baixa potência, fotobiomodulação e MMP. Recupere a densidade e saúde dos seus fios com tecnologia avançada.',
   keywords: [

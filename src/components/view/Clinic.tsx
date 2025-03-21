@@ -8,7 +8,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card, CardContent } from '../ui/card'
 import Image from 'next/image'
 
-export function Clinic() {
+export const Clinic = () => {
   const t = useTranslations('Clinic')
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }))
 

@@ -344,5 +344,14 @@
   "ServicesBtn": {
     "buttonTitle": "Haz clic aquí",
     "buttonText": "Ver otros servicios"
+  },
+
+  "About": {
+    "title": "Sobre DR. Ediney Galvão",
+    "paragraph1": "Diretor Médico e Cirurgião da Clínica Dr. Hair Transplante Capilar, um conceito pioneiro em cirurgia de restauração capilar na região da Tríplice Fronteira.",
+    "paragraph2": "Ediney Galvão é médico especialista em transplante capilar, tricologia e tratamentos capilares.",
+    "paragraph3": "Possui especialização em Práticas Integrativas e Complementares em Saúde; em Nutrição Clínica, em Cannabis Medicinal.",
+    "paragraph4": "É especialista também em Gestão Hospitalar e Gestão da Qualidade em Saúde e Acreditação Hospitalar.",
+    "buttonText": "Entre em Contato"
   }
 }
