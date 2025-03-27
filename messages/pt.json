@@ -353,5 +353,10 @@
     "paragraph3": "Possui especialização em Práticas Integrativas e Complementares em Saúde; em Nutrição Clínica, em Cannabis Medicinal.",
     "paragraph4": "É especialista também em Gestão Hospitalar e Gestão da Qualidade em Saúde e Acreditação Hospitalar.",
     "buttonText": "Entre em Contato"
+  },
+
+  "WhatsappMsg": {
+    "msg": "Olá! Vi o anúncio de vocês e quero agendar uma avaliação para os tratamentos capilares. Pode me ajudar?",
+    "buttonText": "Entre em Contato"
   }
 }

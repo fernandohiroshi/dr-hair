@@ -1,9 +1,14 @@
+import { useTranslations } from 'next-intl'
 import { IoLogoWhatsapp } from 'react-icons/io'
 
 export const WhatsAppButton = () => {
+  const t = useTranslations('WhatsappMsg')
+  const phoneNumber = '5545991280101'
+  const message = encodeURIComponent(`${t('msg')}`)
+
   return (
     <a
-      href="https://wa.me/5545991280101"
+      href={`https://wa.me/${phoneNumber}?text=${message}`}
       title="Fale conosco!"
       className="fixed bottom-4 right-4 rounded-2xl border border-emerald-500/40 bg-emerald-500 px-4 py-2 text-center text-white backdrop-blur-sm duration-300 ease-in-out hover:bg-emerald-400"
     >

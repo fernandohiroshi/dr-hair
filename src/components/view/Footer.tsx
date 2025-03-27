@@ -3,7 +3,8 @@
 import Image from 'next/image'
 import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
-import { IconBrandWhatsapp, IconMail, IconBrandInstagram } from '@tabler/icons-react'
+import { IconMail, IconBrandInstagram } from '@tabler/icons-react'
+import { WhatsAppButtonFooter } from './WhatsappBtn3'
 
 const servicesLinks = [
   { href: '/fue', label: 'fue' },
@@ -13,7 +14,6 @@ const servicesLinks = [
 ]
 
 const contactLinks = [
-  { href: 'https://wa.me/5545991280101', label: 'Whatsapp', icon: IconBrandWhatsapp },
   { href: 'https://www.instagram.com/drhairtransplantecapilar/', label: 'Instagram', icon: IconBrandInstagram },
   { href: 'mailto:drhairtransplantecapilar@gmail.com', label: 'E-Mail', icon: IconMail },
 ]
@@ -45,6 +45,9 @@ export const Footer = () => {
               {label}
             </a>
           ))}
+
+          {/* WhatsApp */}
+          <WhatsAppButtonFooter />
         </div>
 
         <Link

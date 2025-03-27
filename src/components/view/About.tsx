@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl'
+import { WhatsAppButtonShadcn } from './WhatsappBtn2'
 
 export const About = () => {
   const t = useTranslations('About')
@@ -19,9 +18,7 @@ export const About = () => {
           <br />
           <p className="mb-8 text-justify text-sm lg:text-base">{t('paragraph4')}</p>
 
-          <Link href="#contact">
-            <Button variant="outline">{t('buttonText')}</Button>
-          </Link>
+          <WhatsAppButtonShadcn />
         </div>
 
         <div className="overflow-hidden rounded shadow-2xl brightness-110">
