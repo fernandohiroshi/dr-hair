@@ -6,13 +6,16 @@ import { useTranslations } from 'next-intl'
 import { ImersaoFUE } from '@/components/view/imersaoFueSections/ImersaoFue'
 
 export default function CursoPage() {
+  // HOOK TO HANDLE MULTILINGUAL SUPPORT FOR THIS PAGE
   const t = useTranslations('CursoPage')
 
+  // ARRAY CONTAINING SECTION DATA INCLUDING TITLE AND CONTENT
   const items = [
     {
       title: t('sections.introduction.title'),
       content: (
         <div className="text-justify">
+          {/* INTRODUCTION SECTION CONTENT WITH IMAGE */}
           <p className="mb-8 text-xs text-black/90 md:text-lg">{t('sections.introduction.content')}</p>
           <div className="grid grid-cols-1 gap-4">
             <Image
@@ -30,6 +33,7 @@ export default function CursoPage() {
       title: t('sections.courses.title'),
       content: (
         <div className="text-justify">
+          {/* COURSES SECTION WITH IMAGES */}
           <ul className="mb-8 text-xs text-black/90 md:text-lg">
             <li>🔹 {t('sections.courses.botox')}</li>
             <li className="my-8">
@@ -60,6 +64,7 @@ export default function CursoPage() {
       title: t('sections.why_choose_us.title'),
       content: (
         <div className="text-justify">
+          {/* WHY CHOOSE US SECTION WITH ADVANTAGES */}
           <ul className="mb-8 text-xs text-black/90 md:text-lg">
             {t.raw('sections.why_choose_us.advantages').map((adv: string, index: number) => (
               <li key={index}>🔹 {adv}</li>
@@ -72,8 +77,13 @@ export default function CursoPage() {
 
   return (
     <main className="mx-auto mt-8 max-w-screen-xl scroll-mt-24 px-2 py-16 md:mt-24 md:pt-24">
+      {/* IMMERSIVE FUE SECTION */}
       <ImersaoFUE />
+
+      {/* TIMELINE SECTION WITH DATA FROM `items` ARRAY */}
       <Timeline title={t('timelineTitle')} description={t('timelineDescription')} data={items} />
+
+      {/* CONTACT FORM SECTION */}
       <ContactForm />
     </main>
   )

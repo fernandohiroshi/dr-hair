@@ -10,11 +10,13 @@ import { getMessages } from 'next-intl/server'
 import { WhatsAppButton } from '@/components/view/WhatsappBtn'
 import { Footer } from '@/components/view/Footer'
 
+// CONFIGURE MONTESERRAT FONT WITH SPECIFIC WEIGHT AND SUBSETS
 const M = Montserrat({
   subsets: ['latin'],
   weight: '300',
 })
 
+// METADATA CONFIGURATION FOR SEO AND OPEN GRAPH
 export const metadata: Metadata = {
   title: 'DR Hair',
   description:
@@ -68,6 +70,7 @@ export const metadata: Metadata = {
   },
 }
 
+// LOCALE LAYOUT COMPONENT - HANDLES LANGUAGE AND STRUCTURE
 export default async function LocaleLayout({
   children,
   params,
@@ -77,16 +80,18 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params
 
+  // CHECK IF LOCALE EXISTS IN CONFIGURED LOCALES, OTHERWISE RETURN 404 PAGE
   if (!routing.locales.includes(locale as any)) {
     notFound()
   }
 
+  // FETCH TRANSLATION MESSAGES FOR THE CURRENT LOCALE
   const messages = await getMessages()
 
   return (
     <html lang={locale} suppressHydrationWarning className="!scroll-smooth">
       <head>
-        {/* Google Tag Manager */}
+        {/* GOOGLE TAG MANAGER SCRIPT FOR TRACKING */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -95,9 +100,11 @@ export default async function LocaleLayout({
           })(window,document,'script','dataLayer','GTM-5ZJ835G2');`}
         </Script>
       </head>
+
+      {/* INTERNATIONALIZATION PROVIDER FOR HANDLING TRANSLATIONS */}
       <NextIntlClientProvider messages={messages}>
         <body className={`${M.className} antialiased`}>
-          {/* Google Tag Manager (noscript) */}
+          {/* GOOGLE TAG MANAGER NOSCRIPT FALLBACK */}
           <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-5ZJ835G2"
@@ -107,9 +114,16 @@ export default async function LocaleLayout({
             ></iframe>
           </noscript>
 
+          {/* HEADER COMPONENT */}
           <Header />
+
+          {/* MAIN PAGE CONTENT */}
           {children}
+
+          {/* FOOTER COMPONENT */}
           <Footer />
+
+          {/* WHATSAPP CONTACT BUTTON */}
           <WhatsAppButton />
         </body>
       </NextIntlClientProvider>

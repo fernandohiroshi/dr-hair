@@ -2,15 +2,19 @@ import Image from 'next/image'
 import { Timeline } from '@/components/ui/timeline'
 import { useTranslations } from 'next-intl'
 import { AssessmentBtn } from '@/components/view/AssessmentBtn'
+import { WhatsAppButtonShadcn } from '@/components/view/WhatsappBtn2'
 
 export default function AntesEDepoisPage() {
+  // HOOK TO HANDLE MULTILINGUAL SUPPORT FOR THIS PAGE
   const t = useTranslations('AntesEDepoisPage')
 
+  // ARRAY CONTAINING THE CONTENT FOR EACH SECTION
   const items = [
     {
       title: t('sections.transformation_title'),
       content: (
         <div className="text-justify">
+          {/* TRANSFORMATION SECTION WITH CONTENT AND IMAGE */}
           <p className="font-base mb-8 text-xs text-black/90 md:text-lg">{t('sections.transformation_content')}</p>
           <p className="font-base my-8 text-xs text-black/90 md:text-lg">{t('sections.concern_title')}</p>
           <p className="font-base my-8 text-xs text-black/90 md:text-lg">{t('sections.concern_content')}</p>
@@ -35,6 +39,7 @@ export default function AntesEDepoisPage() {
       title: t('sections.before_after_title'),
       content: (
         <div className="text-justify">
+          {/* BEFORE AND AFTER IMAGE SECTION */}
           <p className="font-base mb-8 text-xs text-black/90 md:text-lg">{t('sections.before_after_content')}</p>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <Image
@@ -66,8 +71,9 @@ export default function AntesEDepoisPage() {
       title: t('sections.schedule_assessment_title'),
       content: (
         <div className="flex flex-col items-end text-justify">
+          {/* WHATSAPP BUTTON */}
           <p className="font-base mb-8 text-xs text-black/90 md:text-lg">{t('sections.schedule_assessment_content')}</p>
-          <AssessmentBtn />
+          <WhatsAppButtonShadcn />
         </div>
       ),
     },
@@ -75,6 +81,7 @@ export default function AntesEDepoisPage() {
 
   return (
     <main className="mx-auto mt-8 max-w-screen-xl scroll-mt-24 px-2 py-16 md:mt-24 md:pt-24">
+      {/* TIMELINE SECTION WITH DATA FROM `items` ARRAY */}
       <Timeline title={t('timelineTitle')} description={t('timelineDescription')} data={items} />
     </main>
   )

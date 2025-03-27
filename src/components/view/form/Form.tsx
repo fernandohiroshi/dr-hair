@@ -6,6 +6,7 @@ import { Textarea } from './components/Textarea'
 import { TextInput } from './components/TextInput'
 
 export const ContactForm = () => {
+  // USING THE CUSTOM HOOK TO MANAGE FORM DATA AND HANDLERS
   const { formData, errors, handleChange, handleSubmit, t } = useContactForm()
 
   return (
@@ -17,6 +18,8 @@ export const ContactForm = () => {
         <h2 className="text-md mb-1 animate-pulse font-semibold md:text-2xl">{t('title')}</h2>
         <p className="max-w-lg text-xs md:text-sm">{t('description')}</p>
       </div>
+
+      {/* TEXT INPUT FOR NAME */}
       <TextInput
         name="name"
         placeholder={t('namePlaceholder')}
@@ -24,6 +27,8 @@ export const ContactForm = () => {
         onChange={handleChange}
         error={errors.name}
       />
+
+      {/* TEXT INPUT FOR EMAIL */}
       <TextInput
         name="email"
         type="email"
@@ -32,6 +37,8 @@ export const ContactForm = () => {
         onChange={handleChange}
         error={errors.email}
       />
+
+      {/* TEXT INPUT FOR PHONE */}
       <TextInput
         name="phone"
         type="tel"
@@ -40,8 +47,11 @@ export const ContactForm = () => {
         onChange={handleChange}
         error={errors.phone}
       />
+
       <div>
         <p className="mb-2 font-semibold">{t('doctorQuestion')}</p>
+
+        {/* RADIO INPUT FOR DOCTOR QUESTION */}
         <RadioInput
           name="isDoctor"
           options={[
@@ -52,6 +62,8 @@ export const ContactForm = () => {
           onChange={handleChange}
         />
       </div>
+
+      {/* TEXTAREA FOR MESSAGE */}
       <Textarea
         name="message"
         placeholder={t('messagePlaceholder')}
@@ -59,6 +71,8 @@ export const ContactForm = () => {
         onChange={handleChange}
         error={errors.message}
       />
+
+      {/* SUBMIT BUTTON */}
       <div className="flex w-full justify-end">
         <button
           className="w-full max-w-[160px] rounded bg-stone-200 py-4 font-semibold tracking-widest duration-300 ease-in-out hover:bg-stone-100"

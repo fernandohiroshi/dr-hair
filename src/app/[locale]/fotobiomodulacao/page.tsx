@@ -4,8 +4,10 @@ import { useTranslations } from 'next-intl'
 import { ServicesBtn } from '@/components/view/ServicesBtn'
 
 export default function FotobiomodulacaoPage() {
+  // HOOK TO HANDLE MULTILINGUAL SUPPORT FOR THIS PAGE
   const t = useTranslations('FotobiomodulacaoPage')
 
+  // CONTENT ARRAY TO STORE DATA FOR EACH SECTION
   const fotobiomodulacaoContent = [
     {
       title: t('sections.benefits_title'),
@@ -71,14 +73,18 @@ export default function FotobiomodulacaoPage() {
     <main className="mx-auto mt-24 max-w-screen-xl scroll-mt-24 px-2 py-16 md:pt-24">
       <TracingBeam className="px-6">
         <div className="relative mx-auto max-w-2xl px-4 pt-4 antialiased">
+          {/* LOOP OVER THE SECTIONS DATA TO RENDER CONTENT */}
           {fotobiomodulacaoContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
+              {/* SECTION BADGE DISPLAY */}
               <h2 className="mb-4 w-fit rounded-xl bg-[#A79356] px-4 py-1 text-lg text-white md:text-2xl">
                 {item.badge}
               </h2>
 
+              {/* SECTION TITLE DISPLAY */}
               <p className="mb-4 text-base md:text-xl">{item.title}</p>
 
+              {/* SECTION DESCRIPTION AND IMAGE RENDERING */}
               <div className="prose prose-sm dark:prose-invert text-justify text-base leading-8">
                 {item?.image && (
                   <Image
@@ -93,6 +99,7 @@ export default function FotobiomodulacaoPage() {
               </div>
             </div>
           ))}
+          {/* BUTTON FOR SERVICES SECTION */}
           <ServicesBtn />
         </div>
       </TracingBeam>

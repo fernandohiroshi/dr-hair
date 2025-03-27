@@ -6,6 +6,7 @@ import { ServicesBtn } from '@/components/view/ServicesBtn'
 export default function PrpPage() {
   const t = useTranslations('PrpPage.sections')
 
+  // CONTENT DATA ARRAY FOR PRP PAGE SECTIONS
   const prpContent = [
     {
       title: t('prp_title'),
@@ -60,14 +61,18 @@ export default function PrpPage() {
     <main className="mx-auto mt-24 max-w-screen-xl scroll-mt-24 px-2 py-16 md:pt-24">
       <TracingBeam className="px-6">
         <div className="relative mx-auto max-w-2xl px-4 pt-4 antialiased">
+          {/* ITERATE OVER PRP CONTENT ARRAY TO RENDER SECTIONS */}
           {prpContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
+              {/* SECTION BADGE */}
               <h2 className="mb-4 w-fit rounded-xl bg-[#A79356] px-4 py-1 text-lg text-white md:text-2xl">
                 {item.badge}
               </h2>
 
+              {/* SECTION TITLE */}
               <p className="mb-4 text-base md:text-xl">{item.title}</p>
 
+              {/* SECTION CONTENT */}
               <div className="prose prose-sm dark:prose-invert text-justify text-base leading-8">
                 {item?.image && (
                   <Image
@@ -83,6 +88,7 @@ export default function PrpPage() {
             </div>
           ))}
 
+          {/* SERVICES BUTTON AT THE END OF THE PAGE */}
           <ServicesBtn />
         </div>
       </TracingBeam>

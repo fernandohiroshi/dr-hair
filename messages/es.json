@@ -1,6 +1,6 @@
 {
   "Hero": {
-    "title": "Recuperá tu Confianza con DR Hair",
+    "title": "Recuperá tu Confianza",
     "description": "Trasplante capilar natural y definitivo.",
     "mobileTitle": "Recuperá tu Confianza con DR Hair",
     "mobileDescription": "Trasplantes capilares naturales y duraderos.",
@@ -160,7 +160,8 @@
     "errorName": "El nombre debe tener al menos 3 caracteres",
     "errorEmail": "Correo electrónico inválido",
     "errorPhone": "Formato inválido. Ej: (11) 91234-5678",
-    "formAlert": "Por favor, completa los campos correctamente antes de enviar."
+    "formAlert": "Por favor, completa los campos correctamente antes de enviar.",
+    "introText": "Mis datos para los cursos con Dr Hair"
   },
 
   "CursoPage": {

@@ -3,9 +3,12 @@ import { TracingBeam } from '@/components/ui/tracing-beam'
 import { useTranslations } from 'next-intl'
 import { ServicesBtn } from '@/components/view/ServicesBtn'
 
+// MAIN COMPONENT FOR THE MMP PAGE
 export default function MmpPage() {
+  // HOOK FOR TRANSLATIONS
   const t = useTranslations('MmpPage.sections')
 
+  // ARRAY CONTAINING CONTENT SECTIONS FOR THE PAGE
   const mmpContent = [
     {
       title: t('mmp_title'),
@@ -54,15 +57,20 @@ export default function MmpPage() {
     <main className="mx-auto mt-24 max-w-screen-xl scroll-mt-24 px-2 py-16 md:pt-24">
       <TracingBeam className="px-6">
         <div className="relative mx-auto max-w-2xl px-4 pt-4 antialiased">
+          {/* LOOP THROUGH CONTENT SECTIONS AND RENDER THEM */}
           {mmpContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
+              {/* SECTION TITLE WITH STYLED BADGE */}
               <h2 className="mb-4 w-fit rounded-xl bg-[#A79356] px-4 py-1 text-lg text-white md:text-2xl">
                 {item.badge}
               </h2>
 
+              {/* SECTION HEADER */}
               <p className="mb-4 text-base md:text-xl">{item.title}</p>
 
+              {/* SECTION CONTENT */}
               <div className="prose prose-sm dark:prose-invert text-justify text-base leading-8">
+                {/* IMAGE DISPLAY IF AVAILABLE */}
                 {item?.image && (
                   <Image
                     src={item.image}
@@ -76,6 +84,7 @@ export default function MmpPage() {
               </div>
             </div>
           ))}
+          {/* BUTTON TO NAVIGATE TO SERVICES PAGE */}
           <ServicesBtn />
         </div>
       </TracingBeam>

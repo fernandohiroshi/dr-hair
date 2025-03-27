@@ -6,34 +6,42 @@ import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 
 export const Hero = () => {
+  // USING NEXT-INTL TO GET THE TRANSLATIONS FOR THE HERO SECTION
   const t = useTranslations('Hero')
 
+  // IMAGE URLS FOR DESKTOP VIEW
   const images = [
     'https://imgix.cosmicjs.com/92b2c410-0b25-11f0-8206-effd554de86d-Heroimg2.jpeg',
     'https://imgix.cosmicjs.com/92b200c0-0b25-11f0-8206-effd554de86d-heroImg3.jpeg',
     'https://imgix.cosmicjs.com/928f0f70-0b25-11f0-8206-effd554de86d-heroImg1.jpeg',
   ]
 
+  // IMAGE URLS FOR MOBILE VIEW
   const imagesMobile = [
     'https://imgix.cosmicjs.com/92b2c410-0b25-11f0-8206-effd554de86d-Heroimg2.jpeg',
     'https://imgix.cosmicjs.com/92b200c0-0b25-11f0-8206-effd554de86d-heroImg3.jpeg',
     'https://imgix.cosmicjs.com/928f0f70-0b25-11f0-8206-effd554de86d-heroImg1.jpeg',
   ]
 
+  // ANIMATION PROPS FOR TEXT TRANSITIONS
   const animationProps = {
     initial: { opacity: 0, y: -80 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
   }
 
+  // TEXT SECTION COMPONENT FOR HERO
   const TextSection = ({ title, description }: { title: string; description: string }) => (
     <motion.div {...animationProps} className="absolute inset-0 z-50 flex flex-col items-center justify-center p-4">
+      {/* TITLE ANIMATION */}
       <motion.p className="hidden animate-pulse text-center text-xl font-bold md:flex md:text-3xl md:text-black">
         {title} <span className="animate-bounce md:text-black">.</span>
       </motion.p>
+      {/* DESCRIPTION ANIMATION */}
       <motion.p className="hidden py-2 text-center text-xs font-semibold text-black/60 md:flex md:max-w-xl md:py-2 md:text-sm lg:max-w-2xl lg:text-base">
         {description}
       </motion.p>
+      {/* LINK BUTTON */}
       <Link
         href="/cursos"
         title="Saiba mais!"
@@ -49,18 +57,20 @@ export const Hero = () => {
 
   return (
     <div className="relative mb-4 mt-4">
-      {/* Slider Desktop */}
+      {/* SLIDER FOR DESKTOP VIEW */}
       <div className="hidden md:block">
         <ImagesSlider className="h-[20rem] md:h-[24rem] lg:h-[30rem] xl:h-[40rem]" images={images}>
           <TextSection title={t('title')} description={t('description')} />
         </ImagesSlider>
       </div>
 
-      {/* Slider Mobile */}
+      {/* SLIDER FOR MOBILE VIEW */}
       <div className="mt-16 block md:hidden">
+        {/* MOBILE TITLE */}
         <p className="flex animate-pulse justify-center text-center text-xl font-bold md:text-3xl md:text-black">
           {t('mobileTitle')} <span className="animate-bounce md:text-black">.</span>
         </p>
+        {/* MOBILE DESCRIPTION */}
         <p className="py-2 text-center text-xs font-semibold text-black/60 md:max-w-xl md:py-2 md:text-sm lg:max-w-2xl lg:text-base">
           {t('mobileDescription')}
         </p>

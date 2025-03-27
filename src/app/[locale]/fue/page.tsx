@@ -4,8 +4,10 @@ import { useTranslations } from 'next-intl'
 import { ServicesBtn } from '@/components/view/ServicesBtn'
 
 export default function FuePage() {
+  // HOOK TO HANDLE MULTILINGUAL SUPPORT FOR THIS PAGE
   const t = useTranslations('FuePage')
 
+  // DATA FOR FUE PAGE SECTIONS, INCLUDING TITLE, DESCRIPTION, IMAGE, AND BADGE
   const fueContent = [
     {
       title: t('sections.transplant_title'),
@@ -56,11 +58,14 @@ export default function FuePage() {
   ]
 
   return (
+    // MAIN CONTAINER FOR THE FUE PAGE
     <main className="mx-auto mt-24 max-w-screen-xl scroll-mt-24 px-2 py-16 md:pt-24">
       <TracingBeam className="px-6">
         <div className="relative mx-auto max-w-2xl px-4 pt-4 antialiased">
+          {/* LOOP THROUGH THE SECTIONS DATA AND RENDER EACH ONE */}
           {fueContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
+              {/* DISPLAY SECTION TITLE, BADGE, AND DESCRIPTION */}
               <h2 className="mb-4 w-fit rounded-xl bg-[#A79356] px-4 py-1 text-lg text-white md:text-2xl">
                 {item.badge}
               </h2>
@@ -68,6 +73,7 @@ export default function FuePage() {
               <p className="mb-4 text-base md:text-xl">{item.title}</p>
 
               <div className="prose prose-sm dark:prose-invert text-justify text-base leading-8">
+                {/* DISPLAY IMAGE IF PRESENT */}
                 {item?.image && (
                   <Image
                     src={item.image}
@@ -77,10 +83,12 @@ export default function FuePage() {
                     className="mb-10 max-h-[24rem] rounded-lg object-cover"
                   />
                 )}
+                {/* RENDER THE DESCRIPTION FOR EACH SECTION */}
                 {item.description}
               </div>
             </div>
           ))}
+          {/* BUTTON TO VIEW SERVICES, RENDERED ON THE BOTTOM */}
           <ServicesBtn />
         </div>
       </TracingBeam>

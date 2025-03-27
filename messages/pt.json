@@ -160,7 +160,8 @@
     "errorName": "O nome deve ter pelo menos 3 caracteres",
     "errorEmail": "Email inválido",
     "errorPhone": "Formato inválido. Ex: (11) 91234-5678",
-    "formAlert": "Por favor, preencha os campos corretamente antes de enviar."
+    "formAlert": "Por favor, preencha os campos corretamente antes de enviar.",
+    "introText": "Minhas informações para os cursos com Dr Hair"
   },
 
   "CursoPage": {

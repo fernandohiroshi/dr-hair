@@ -9,8 +9,10 @@ interface SkeletonProps {
 }
 
 export const Services = () => {
+  // USING NEXT-INTL TO GET THE TRANSLATIONS FOR SERVICES
   const t = useTranslations('Services')
 
+  // SERVICES ITEMS ARRAY WITH DETAILS FOR EACH SERVICE
   const items = [
     {
       title: t('fue'),
@@ -50,8 +52,11 @@ export const Services = () => {
 
   return (
     <section id="services" className="mb-16 scroll-mt-28 md:mb-24">
+      {/* SERVICES SECTION HEADER */}
       <h2 className="mb-2 text-xl font-semibold md:text-2xl">{t('title')}</h2>
+      {/* SERVICES DESCRIPTION */}
       <p className="mb-8 max-w-2xl text-justify text-xs md:text-lg">{t('description')}</p>
+      {/* SERVICES GRID LAYOUT */}
       <BentoGrid className="mx-auto max-w-screen-xl auto-rows-[20rem] md:auto-rows-[28rem]">
         {items.map((item, i) => (
           <BentoGridItem
@@ -68,8 +73,10 @@ export const Services = () => {
   )
 }
 
+// SKELETON COMPONENT FOR DISPLAYING IMAGE WITH OVERLAY EFFECT
 const Skeleton: React.FC<SkeletonProps> = ({ imageSrc }) => (
   <div className="relative flex h-full min-h-[6rem] w-full flex-1 rounded-xl">
+    {/* IMAGE WITH COVER STYLE */}
     <Image
       src={imageSrc}
       alt="Background"
@@ -78,6 +85,7 @@ const Skeleton: React.FC<SkeletonProps> = ({ imageSrc }) => (
       className="relative h-full max-h-[24rem] w-full rounded-xl object-cover"
       loading="lazy"
     />
+    {/* CLICK ICON OVERLAY WITH HOVER EFFECT */}
     <div className="absolute right-0 top-0 flex h-full max-h-[24rem] w-full items-start justify-end rounded-xl bg-black/20 p-4 text-4xl text-white opacity-0 duration-300 ease-in-out hover:opacity-100">
       <PiMouseLeftClickLight size={32} className="animate-bounce" />
     </div>
