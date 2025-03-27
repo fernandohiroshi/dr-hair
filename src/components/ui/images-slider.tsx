@@ -7,16 +7,12 @@ import React, { useEffect, useState, useCallback } from 'react'
 export const ImagesSlider = ({
   images,
   children,
-  overlay = true,
-  overlayClassName,
   className,
   autoplay = true,
   direction = 'up',
 }: {
   images: string[]
   children: React.ReactNode
-  overlay?: React.ReactNode
-  overlayClassName?: string
   className?: string
   autoplay?: boolean
   direction?: 'up' | 'down'
@@ -118,9 +114,6 @@ export const ImagesSlider = ({
       }}
     >
       {areImagesLoaded && children}
-      {areImagesLoaded && overlay && (
-        <div className={cn('absolute inset-0 z-40 bg-gradient-to-b from-black/40 to-black/60', overlayClassName)} />
-      )}
 
       {areImagesLoaded && (
         <AnimatePresence>
@@ -131,7 +124,10 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === 'up' ? 'upExit' : 'downExit'}
             variants={slideVariants}
-            className="absolute inset-0 h-full w-full object-cover md:object-center"
+            className={cn(
+              'absolute inset-0 h-full w-full object-cover md:object-contain md:object-center',
+              currentIndex % 2 === 0 ? 'object-right' : 'object-left',
+            )}
           />
         </AnimatePresence>
       )}

@@ -6,10 +6,10 @@ export const About = () => {
   const t = useTranslations('About')
 
   return (
-    <section className="mb-16 md:mb-24">
+    <section className="mb-24 mt-8 md:mt-0">
       <div className="flex flex-col items-center justify-between lg:flex-row">
         <div className="mb-8 max-w-md lg:max-w-xl">
-          <h1 className="mb-6 text-2xl font-semibold lg:text-3xl">{t('title')}</h1>
+          <h1 className="mb-6 text-xl font-semibold lg:text-3xl">{t('title')}</h1>
           <p className="text-justify text-sm lg:text-base">{t('paragraph1')}</p>
           <br />
           <p className="text-justify text-sm lg:text-base">{t('paragraph2')}</p>
