@@ -11,16 +11,16 @@ export const Hero = () => {
 
   // IMAGE URLS FOR DESKTOP VIEW
   const images = [
-    'https://imgix.cosmicjs.com/92b2c410-0b25-11f0-8206-effd554de86d-Heroimg2.jpeg',
-    'https://imgix.cosmicjs.com/92b200c0-0b25-11f0-8206-effd554de86d-heroImg3.jpeg',
-    'https://imgix.cosmicjs.com/928f0f70-0b25-11f0-8206-effd554de86d-heroImg1.jpeg',
+    'https://imgix.cosmicjs.com/194eafe0-0bec-11f0-a62c-63df89a79a6a-heroImg2.jpeg',
+    'https://imgix.cosmicjs.com/193d23b0-0bec-11f0-a62c-63df89a79a6a-heroImg1.jpeg',
+    'https://imgix.cosmicjs.com/19470ec0-0bec-11f0-a62c-63df89a79a6a-heroImg3.jpeg',
   ]
 
   // IMAGE URLS FOR MOBILE VIEW
   const imagesMobile = [
-    'https://imgix.cosmicjs.com/92b2c410-0b25-11f0-8206-effd554de86d-Heroimg2.jpeg',
-    'https://imgix.cosmicjs.com/92b200c0-0b25-11f0-8206-effd554de86d-heroImg3.jpeg',
-    'https://imgix.cosmicjs.com/928f0f70-0b25-11f0-8206-effd554de86d-heroImg1.jpeg',
+    'https://imgix.cosmicjs.com/194eafe0-0bec-11f0-a62c-63df89a79a6a-heroImg2.jpeg',
+    'https://imgix.cosmicjs.com/19470ec0-0bec-11f0-a62c-63df89a79a6a-heroImg3.jpeg',
+    'https://imgix.cosmicjs.com/193d23b0-0bec-11f0-a62c-63df89a79a6a-heroImg1.jpeg',
   ]
 
   // ANIMATION PROPS FOR TEXT TRANSITIONS
