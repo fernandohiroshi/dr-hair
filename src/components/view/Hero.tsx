@@ -13,13 +13,13 @@ export const Hero = () => {
   const images = [
     'https://imgix.cosmicjs.com/194eafe0-0bec-11f0-a62c-63df89a79a6a-heroImg2.jpeg',
     'https://imgix.cosmicjs.com/193d23b0-0bec-11f0-a62c-63df89a79a6a-heroImg1.jpeg',
-    'https://imgix.cosmicjs.com/19470ec0-0bec-11f0-a62c-63df89a79a6a-heroImg3.jpeg',
+    'https://imgix.cosmicjs.com/e6ce8650-0e37-11f0-a62c-63df89a79a6a-heroImg3.jpeg',
   ]
 
   // IMAGE URLS FOR MOBILE VIEW
   const imagesMobile = [
     'https://imgix.cosmicjs.com/194eafe0-0bec-11f0-a62c-63df89a79a6a-heroImg2.jpeg',
-    'https://imgix.cosmicjs.com/19470ec0-0bec-11f0-a62c-63df89a79a6a-heroImg3.jpeg',
+    'https://imgix.cosmicjs.com/194eafe0-0bec-11f0-a62c-63df89a79a6a-heroImg2.jpeg',
     'https://imgix.cosmicjs.com/193d23b0-0bec-11f0-a62c-63df89a79a6a-heroImg1.jpeg',
   ]
 

@@ -10,7 +10,7 @@ export default function FotobiomodulacaoPage() {
   // CONTENT ARRAY TO STORE DATA FOR EACH SECTION
   const fotobiomodulacaoContent = [
     {
-      title: t('sections.benefits_title'),
+      title: t('sections.benefits_sub_title'),
       description: (
         <>
           <ul>
@@ -25,7 +25,6 @@ export default function FotobiomodulacaoPage() {
       image: 'https://imgix.cosmicjs.com/db741120-e7d2-11ef-b333-e101bec29f3d-laser1.jpg',
     },
     {
-      title: t('sections.efficacy_title'),
       description: (
         <>
           <p>{t('sections.efficacy_description')}</p>
@@ -49,7 +48,6 @@ export default function FotobiomodulacaoPage() {
       image: 'https://imgix.cosmicjs.com/db54c950-e7d2-11ef-b333-e101bec29f3d-laser2.jpg',
     },
     {
-      title: t('sections.custom_protocol_title'),
       description: (
         <>
           <ul>

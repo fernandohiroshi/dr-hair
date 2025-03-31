@@ -37,9 +37,9 @@ export const Clinic = () => {
         <h3 className="lg;text-lg text-sm md:text-base">{t('address')}</h3>
 
         <a
-          href="https://maps.app.goo.gl/mx9HA18hSStDPDLp6"
+          href="https://www.google.com/maps/place/Dr+Hair+Transplante+Capilar/@-25.483108,-54.6208397,981m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94f685958537b513:0x663c07facbce1dd1!8m2!3d-25.4831129!4d-54.6182648!16s%2Fg%2F11x16zqkp6?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D"
           title="Google Map"
-          className="ml-2 text-sm text-red-900 duration-300 ease-in-out hover:underline lg:text-lg"
+          className="ml-2 text-sm font-semibold text-red-800 duration-300 ease-in-out hover:underline lg:text-lg"
         >
           {t('googleMap')}
         </a>

@@ -214,7 +214,8 @@
     "timelineTitle": "Fotobiomodulación Capilar",
     "timelineDescription": "Entiende los beneficios de la fotobiomodulación para el tratamiento capilar y cómo puede ayudar en la recuperación y el crecimiento del cabello.",
     "sections": {
-      "benefits_title": "Beneficios del Tratamiento",
+      "benefits_title": "Fotobiomodulación con láser",
+      "benefits_sub_title": "Beneficios del Tratamiento",
       "benefits_description": [
         "Estimula la actividad celular",
         "Promueve la reparación y regeneración tisular",
@@ -359,5 +360,11 @@
   "WhatsappMsg": {
     "msg": "¡Hola! Vi su anuncio y quiero agendar una evaluación para los tratamientos capilares. ¿Me puede ayudar?",
     "buttonText": "Contáctanos"
+  },
+
+  "NotFoundPage": {
+    "title": "Página no encontrada",
+    "description": "Verifique si la URL es correcta. Esta página no existe.",
+    "backToHome": "Volver al inicio"
   }
 }
