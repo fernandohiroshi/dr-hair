@@ -25,16 +25,16 @@ export const Clinic = () => {
   ]
 
   return (
-    <section className="mb-16 scroll-mt-28 md:mb-28 md:px-4" id="clinics">
+    <section className="mt-16 scroll-mt-28 md:mt-24 md:px-4" id="clinics">
       {/* HEADER SECTION WITH TITLE AND DESCRIPTION */}
       <div className="mb-8 md:mb-16">
-        <h2 className="mb-2 text-xl font-semibold md:text-2xl">{t('title')}</h2>
+        <h2 className="mb-4 text-xl font-semibold md:text-2xl">{t('title')}</h2>
         <p className="max-w-2xl text-justify text-xs md:text-sm lg:text-lg">{t('description')}</p>
       </div>
 
       {/* ADDRESS SECTION WITH A LINK TO GOOGLE MAP */}
       <div className="mb-8 flex flex-col gap-1">
-        <h3 className="lg;text-lg text-sm md:text-base">{t('address')}</h3>
+        <h3 className="lg;text-lg mb-4 text-sm md:text-base">{t('address')}</h3>
 
         <a
           href="https://www.google.com/maps/place/Dr+Hair+Transplante+Capilar/@-25.483108,-54.6208397,981m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94f685958537b513:0x663c07facbce1dd1!8m2!3d-25.4831129!4d-54.6182648!16s%2Fg%2F11x16zqkp6?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D"

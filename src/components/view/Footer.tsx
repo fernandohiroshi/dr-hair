@@ -25,7 +25,7 @@ export const Footer = () => {
   const t = useTranslations('Footer')
 
   return (
-    <footer className="w-full bg-gradient-to-b from-transparent to-stone-50" id="contact">
+    <footer className="mt-16 w-full bg-gradient-to-b from-transparent to-stone-50 md:mt-8 lg:mt-0" id="contact">
       {/* CONTAINER FOR FOOTER CONTENT */}
       <div className="col-span-1 mx-auto grid max-w-screen-xl items-center gap-8 px-4 py-8 md:grid-cols-[2fr_2fr_1fr] md:px-8 md:py-32">
         {/* SERVICES SECTION */}

@@ -51,9 +51,9 @@ export const Services = () => {
   ]
 
   return (
-    <section id="services" className="mb-16 scroll-mt-28 md:mb-24">
+    <section id="services" className="mt-16 scroll-mt-28 md:mt-24">
       {/* SERVICES SECTION HEADER */}
-      <h2 className="mb-2 text-xl font-semibold md:text-2xl">{t('title')}</h2>
+      <h2 className="mb-4 text-lg font-semibold md:text-2xl">{t('title')}</h2>
       {/* SERVICES DESCRIPTION */}
       <p className="mb-8 max-w-2xl text-justify text-xs md:text-lg">{t('description')}</p>
       {/* SERVICES GRID LAYOUT */}

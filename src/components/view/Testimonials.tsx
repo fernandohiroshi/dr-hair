@@ -26,8 +26,8 @@ export const Testimonials = () => {
   ]
 
   return (
-    <section>
-      <h2 className="mb-12 flex items-center justify-center text-xl font-bold md:text-2xl">{t('title')}</h2>
+    <section className="mt-16 md:mt-24">
+      <h2 className="mb-8 flex items-center justify-center text-xl font-bold md:text-2xl">{t('title')}</h2>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((client, index) => (
           <div key={index} className="flex max-h-[20rem] flex-col justify-start rounded-2xl bg-[#E4DDD1] p-4 shadow-xl">
@@ -35,12 +35,12 @@ export const Testimonials = () => {
               <Avatar>
                 <AvatarImage src={client.image} alt={client.name} className="animate-pulse" />
               </Avatar>
-              <h2 className="ml-2 text-base font-semibold">
+              <h2 className="ml-2 text-sm font-semibold md:text-base">
                 {client.name} - {client.profession}
               </h2>
             </div>
             <div className="p-4">
-              <p className="text-justify text-sm">{client.feedback}</p>
+              <p className="text-justify text-xs md:text-sm">{client.feedback}</p>
             </div>
           </div>
         ))}

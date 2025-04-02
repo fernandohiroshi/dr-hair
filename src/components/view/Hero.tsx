@@ -56,7 +56,7 @@ export const Hero = () => {
   )
 
   return (
-    <div className="relative mb-4 mt-4">
+    <div className="relative mb-4 mt-8">
       {/* SLIDER FOR DESKTOP VIEW */}
       <div className="hidden md:block">
         <ImagesSlider className="h-[20rem] md:h-[24rem] lg:h-[30rem] xl:h-[40rem]" images={images}>
@@ -67,11 +67,11 @@ export const Hero = () => {
       {/* SLIDER FOR MOBILE VIEW */}
       <div className="mt-16 block md:hidden">
         {/* MOBILE TITLE */}
-        <p className="flex animate-pulse justify-center text-center text-xl font-bold md:text-3xl md:text-black">
+        <h2 className="flex animate-pulse justify-center text-center text-xl font-bold md:text-3xl md:text-black">
           {t('mobileTitle')} <span className="animate-bounce md:text-black">.</span>
-        </p>
+        </h2>
         {/* MOBILE DESCRIPTION */}
-        <p className="py-2 text-center text-xs font-semibold text-black/60 md:max-w-xl md:py-2 md:text-sm lg:max-w-2xl lg:text-base">
+        <p className="py-2 text-center text-sm font-semibold text-black/60 md:max-w-xl md:py-2 md:text-sm lg:max-w-2xl lg:text-base">
           {t('mobileDescription')}
         </p>
         <ImagesSlider className="mt-8 h-[20rem] px-2" images={imagesMobile}>
