@@ -25,7 +25,7 @@ export const Clinic = () => {
   ]
 
   return (
-    <section className="scroll-mt-28 md:px-4" id="clinics">
+    <section className="mb-16 scroll-mt-28 md:mb-28 md:px-4" id="clinics">
       {/* HEADER SECTION WITH TITLE AND DESCRIPTION */}
       <div className="mb-8 md:mb-16">
         <h2 className="mb-2 text-xl font-semibold md:text-2xl">{t('title')}</h2>

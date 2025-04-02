@@ -34,7 +34,7 @@ export const About = () => {
         </div>
 
         {/* RIGHT COLUMN CONTAINING IMAGE */}
-        <div className="overflow-hidden rounded shadow-2xl brightness-110">
+        <div className="overflow-hidden rounded bg-[#E4DDD1] shadow-2xl">
           <Image
             src="https://imgix.cosmicjs.com/c050f7d0-061f-11f0-9871-8341aa2caafe-about.jpeg"
             width={500}

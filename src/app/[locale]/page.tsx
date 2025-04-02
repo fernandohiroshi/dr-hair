@@ -2,6 +2,7 @@ import { Hero } from '@/components/view/Hero'
 import { Services } from '@/components/view/Services'
 import { Clinic } from '@/components/view/Clinic'
 import { About } from '@/components/view/About'
+import { Testimonials } from '@/components/view/Testimonials'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <About />
         <Services />
         <Clinic />
+        <Testimonials />
       </main>
     </div>
   )

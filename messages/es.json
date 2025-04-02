@@ -366,5 +366,26 @@
     "title": "Página no encontrada",
     "description": "Verifique si la URL es correcta. Esta página no existe.",
     "backToHome": "Volver al inicio"
+  },
+
+  "Testimonials": {
+    "title": "Lo que dicen nuestros clientes 💬",
+    "clients": [
+      {
+        "name": "Ricardo Herman",
+        "profession": "Cantante",
+        "feedback": "¡Además de un gran profesionalismo de todo el equipo! Preocupación por el cliente, todo el cuidado y atención posible. Asistencia en el postoperatorio. ¡Vale cada centavo invertido!"
+      },
+      {
+        "name": "Wladimir",
+        "profession": "Despachante aduanero",
+        "feedback": "Mi experiencia con Dr. Hair fue sorprendente, ya que el resultado superó mis expectativas, además del excelente servicio, un equipo competente y atento, y una gran atención postventa."
+      },
+      {
+        "name": "Douglas Guimarães",
+        "profession": "Fotógrafo",
+        "feedback": "Tuve una atención impecable con Dr. Hair, fue una experiencia increíble. Desde la primera consulta hasta el procedimiento, incluyendo el postoperatorio, recibí todo el apoyo y atención que necesitaba. El Dr. Ediney, junto con su equipo, además de ser un excelente profesional, siempre fue muy atento y cuidadoso."
+      }
+    ]
   }
 }

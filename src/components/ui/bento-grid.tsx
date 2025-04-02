@@ -29,7 +29,7 @@ export const BentoGridItem = ({
       title={t('saibaMais')}
       passHref
       className={cn(
-        'group/bento row-span-1 flex flex-col justify-between space-y-4 rounded-xl bg-stone-50/40 p-2 shadow-md transition duration-300 ease-in-out hover:bg-stone-50/80 hover:shadow-xl md:p-4',
+        'group/bento row-span-1 flex flex-col justify-between space-y-4 rounded-xl bg-[#E4DDD1] p-2 shadow-md transition duration-300 ease-in-out hover:bg-[#fffbf5] hover:shadow-xl md:p-4',
         className,
       )}
     >
