@@ -2,13 +2,15 @@
 
 [日本語のドキュメントへ](#dr-hair-ヘアトランスプラント)
 
-DR Hair Transplante Capilar is a cutting-edge website dedicated to hair transplant procedures and hair loss treatments. Our specialists offer advanced FUE hair transplants along with treatments such as PRP, low-level laser therapy, photobiomodulation, and MMP. The site is designed with a modern, responsive interface and internationalization support to cater to a diverse audience.
+DR Hair Transplante Capilar is a cutting-edge website dedicated to hair transplant procedures and hair loss treatments. Our specialists offer advanced FUE hair transplants along with treatments such as PRP, low-level laser therapy, photobiomodulation, and MMP. The site features a modern, responsive interface with internationalization support to cater to a diverse audience.
 
 ![DR Hair Preview](https://imgix.cosmicjs.com/302068e0-f4d0-11ef-b3e3-d17f92c625e7-readme-pic.png)
 
 > **Notice**: This project is licensed under the MIT License. Unauthorized use or duplication of this code is prohibited.
 
-To get started, clone the repository and run the following commands:
+## Getting Started
+
+Clone the repository and run the following commands:
 
 ```bash
 git clone https://github.com/yourusername/drhairtransplantecapilar.git
@@ -18,121 +20,148 @@ npm run dev
 
 ## Table of Contents
 
-1. [Technologies Used](#technologies-used)
+1. [Technologies](#technologies)
 2. [Project Structure](#project-structure)
 3. [Internationalization](#internationalization)
-4. [Demo Components](#demo-components)
-5. [Deployment](#deployment)
-6. [License](#license)
+4. [Deployment](#deployment)
+5. [License](#license)
 
-## Technologies Used
+## Technologies
 
-The project is built with modern web technologies and libraries to ensure high performance and scalability.
+### Core
+- **[Next.js](https://nextjs.org)**: React framework for server-side rendered applications
+- **[React](https://reactjs.org)**: JavaScript library for building user interfaces
+- **[Tailwind CSS](https://tailwindcss.com)**: Utility-first CSS framework for rapid UI development
+- **[Next-intl](https://next-intl-docs.vercel.app/)**: Library for internationalization support
 
-### Front-end
+### UI and Animations
+- **[Framer Motion](https://www.framer.com/motion/)**: Library for smooth animations and transitions
+- **[Embla Carousel](https://www.embla-carousel.com)**: Interactive, responsive carousels with autoplay support
 
-- **Next.js**: React framework for building server-side rendered applications.
-- **Next-intl**: Library for internationalization support.
-- **React**: A JavaScript library for building user interfaces.
-- **Tailwind CSS**: Utility-first CSS framework (with plugins like tailwind-merge and tailwindcss-animate) for rapid UI development.
-- **Framer Motion**: For smooth animations and transitions.
+### Component Libraries
+- **[@radix-ui/react-slot](https://www.radix-ui.com)**: For managing component slots
+- **[@tabler/icons-react](https://tabler-icons.io/)**: Icon library for React
 
-### Additional Dependencies
-
-- **@radix-ui/react-slot**: For managing component slots.
-- **@tabler/icons-react**: Icon library for React.
-- **class-variance-authority**: For conditional class handling.
-- **clsx**: Utility for conditionally concatenating CSS classes.
-- **embla-carousel, embla-carousel-autoplay, embla-carousel-react**: For creating interactive, responsive carousels.
-- **lucide-react** and **react-icons**: For scalable and customizable icons.
+### Utilities
+- **[class-variance-authority](https://cva.style/docs)**: Conditional class handling
+- **[clsx](https://github.com/lukeed/clsx)**: Utility for conditionally concatenating CSS classes
+- **[lucide-react](https://lucide.dev/)** and **[react-icons](https://react-icons.github.io/react-icons/)**: Scalable icon libraries
 
 ## Project Structure
 
 ```bash
-messages
-public
-src
-├── app
-│   ├── [locale]
-│   ├── page.tsx
-│   ├── layout.tsx
-│   ├── globals.css
-│   └── pages/...
-├── components
-│   ├── ui
-│   └── view
-├── i18n
-├── lib
-└── middleware.ts
+project-root/
+├── messages/         # Localization files
+├── public/           # Static assets
+└── src/
+    ├── app/
+    │   ├── [locale]/ # Locale-specific routes
+    │   ├── pages/    # Application pages
+    │   ├── layout.tsx
+    │   ├── page.tsx
+    │   └── globals.css
+    ├── components/
+    │   ├── ui/       # Reusable UI components
+    │   └── view/     # Page-specific components
+    ├── i18n/         # Internationalization configuration
+    ├── lib/          # Utility functions
+    └── middleware.ts # Request handlers and locale config
 ```
-
-## Project Structure Details
-
-- **messages**: Contains localization files for internationalization.
-- **public**: Static assets and media files.
-- **src/app**: Main application files including routing, layout, and global styles.
-- **components**: Reusable UI and view components.
-- **i18n**: Configuration and routing for internationalization.
-- **lib**: Utility functions and helper libraries.
-- **middleware.ts**: Middleware for handling requests and locale configuration.
 
 ## Internationalization
 
-The project uses **Next-intl** for managing translations and locale settings. The localization files are stored in the `messages` folder, and the locale configuration is handled in the `middleware.ts` and `[locale]` directory within `src/app`. This ensures that the website can serve content in multiple languages, providing a better user experience for an international audience.
-
-These components serve as examples of how the project leverages **Next.js**, **Tailwind CSS**, and various UI libraries to create a dynamic and engaging user interface.
+The project uses **Next-intl** to provide a multilingual experience. Translation files are stored in the `messages` directory, with locale configuration managed through `middleware.ts` and the `[locale]` dynamic route structure. This allows content to be served in multiple languages, enhancing the user experience for our international audience.
 
 ## Deployment
 
-The project is deployed live and can be accessed at:
+The project is deployed and accessible at:
 
-[DR Hair Transplante Capilar](https://drhairtransplantecapilar.com.br)
+[drhairtransplantecapilar.com.br](https://drhairtransplantecapilar.com.br)
 
 ## License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
+---
+
 # DR Hair ヘアトランスプラント
 
-**DR Hair ヘアトランスプラント**は、FUE技術を使用した高度なヘアトランスプラントや、PRP、低出力レーザー治療、フォトビオモジュレーション、MMPなどの脱毛治療を提供する最新のウェブサイトです。サイトはモダンでレスポンシブなインターフェースを持ち、ユーザーに優れた体験を提供します。また、国際化にも対応しており、さまざまな言語でアクセス可能です。
+[English Documentation](#dr-hair-transplante-capilar)
 
-このプロジェクトは、パフォーマンスとスケーラビリティを確保するために、最新のWeb技術を使用して構築されています。主な技術は以下の通りです：
+**DR Hair ヘアトランスプラント**は、最先端のヘアトランスプラント施術と脱毛治療に特化したウェブサイトです。当院の専門家は、FUE技術を用いた高度な植毛手術に加え、PRP、低出力レーザー治療、フォトビオモジュレーション、MMPなどの治療法を提供しています。サイトは多様なユーザーに対応するため、モダンでレスポンシブなインターフェースと国際化サポートを備えています。
 
-- **Next.js**: サーバーサイドレンダリング（SSR）をサポートするReactフレームワーク。
-- **React**: インタラクティブなユーザーインターフェースを構築するためのJavaScriptライブラリ。
-- **Tailwind CSS**: 高速なUI開発をサポートするユーティリティファーストのCSSフレームワーク（`tailwind-merge`や`tailwindcss-animate`などのプラグインを使用）。
-- **Next-intl**: 翻訳とロケール設定を管理するための国際化サポートライブラリ。
-- **Framer Motion**: スムーズなアニメーションと遷移を実現するライブラリ。
+> **注意**: このプロジェクトはMITライセンスの下で提供されています。無断での使用や複製は禁止されています。
 
-また、次のような追加の依存関係も使用しています：
+## 始め方
 
-- **@radix-ui/react-slot**: コンポーネントスロットを管理するためのライブラリ。
-- **@tabler/icons-react**: React用のアイコンライブラリ。
-- **class-variance-authority**: 条件付きでCSSクラスを管理するためのライブラリ。
-- **clsx**: CSSクラスを条件付きで連結するユーティリティ。
-- **embla-carousel, embla-carousel-autoplay, embla-carousel-react**: インタラクティブでレスポンシブなカルーセルを作成するためのライブラリ。
-- **lucide-react, react-icons**: スケーラブルでカスタマイズ可能なアイコンライブラリ。
+リポジトリをクローンし、以下のコマンドを実行してください：
+
+```bash
+git clone https://github.com/yourusername/drhairtransplantecapilar.git
+npm install
+npm run dev
+```
+
+## 目次
+
+1. [使用技術](#使用技術)
+2. [プロジェクト構造](#プロジェクト構造)
+3. [国際化](#国際化)
+4. [デプロイメント](#デプロイメント)
+5. [ライセンス](#ライセンス)
+
+## 使用技術
+
+### コア
+- **[Next.js](https://nextjs.org)**: サーバーサイドレンダリングをサポートするReactフレームワーク
+- **[React](https://reactjs.org)**: ユーザーインターフェース構築のためのJavaScriptライブラリ
+- **[Tailwind CSS](https://tailwindcss.com)**: 高速なUI開発のためのユーティリティファーストCSSフレームワーク
+- **[Next-intl](https://next-intl-docs.vercel.app/)**: 国際化サポートのためのライブラリ
+
+### UIとアニメーション
+- **[Framer Motion](https://www.framer.com/motion/)**: スムーズなアニメーションと遷移のためのライブラリ
+- **[Embla Carousel](https://www.embla-carousel.com)**: 自動再生機能を備えたインタラクティブなカルーセル
+
+### コンポーネントライブラリ
+- **[@radix-ui/react-slot](https://www.radix-ui.com)**: コンポーネントスロット管理
+- **[@tabler/icons-react](https://tabler-icons.io/)**: React用アイコンライブラリ
+
+### ユーティリティ
+- **[class-variance-authority](https://cva.style/docs)**: 条件付きクラス管理
+- **[clsx](https://github.com/lukeed/clsx)**: CSSクラスを条件付きで連結するユーティリティ
+- **[lucide-react](https://lucide.dev/)** と **[react-icons](https://react-icons.github.io/react-icons/)**: スケーラブルなアイコンライブラリ
 
 ## プロジェクト構造
 
-- **messages**: 翻訳とロケール設定のためのファイルが格納されています。
-- **public**: 静的なアセットやメディアファイルが含まれています。
-- **src/app**: アプリケーションの主要ファイル、ルーティング、レイアウト、グローバルスタイルが含まれています。
-- **components**: 再利用可能なUIコンポーネントとビューコンポーネント。
-- **i18n**: 国際化設定とルーティング。
-- **lib**: ユーティリティ関数と補助ライブラリ。
-- **middleware.ts**: リクエストの処理とロケール設定を管理するミドルウェア。
+```bash
+project-root/
+├── messages/         # 翻訳ファイル
+├── public/           # 静的アセット
+└── src/
+    ├── app/
+    │   ├── [locale]/ # ロケール別ルート
+    │   ├── pages/    # アプリケーションページ
+    │   ├── layout.tsx
+    │   ├── page.tsx
+    │   └── globals.css
+    ├── components/
+    │   ├── ui/       # 再利用可能なUIコンポーネント
+    │   └── view/     # ページ固有のコンポーネント
+    ├── i18n/         # 国際化設定
+    ├── lib/          # ユーティリティ関数
+    └── middleware.ts # リクエストハンドラとロケール設定
+```
 
 ## 国際化
 
-このプロジェクトでは、**Next-intl**を使用して翻訳とロケール設定を管理しています。翻訳ファイルは`messages`フォルダに保存されており、ロケール設定は`middleware.ts`と`[locale]`ディレクトリ内で管理されています。このアプローチにより、サイトは複数の言語に対応でき、国際的なユーザーにも優れた体験を提供します。
-
-## ライセンス
-
-このプロジェクトは**MITライセンス**のもとで提供されています。詳細については、[LICENSE](LICENSE)ファイルを参照してください。
+このプロジェクトでは**Next-intl**を使用して多言語体験を提供しています。翻訳ファイルは`messages`ディレクトリに保存され、ロケール設定は`middleware.ts`と`[locale]`動的ルート構造を通じて管理されています。これにより、コンテンツは複数の言語で提供され、国際的なユーザーのエクスペリエンスを向上させます。
 
 ## デプロイメント
 
-プロジェクトはライブでデプロイされており、以下のリンクからアクセスできます：
+プロジェクトは以下のURLでデプロイされ、アクセス可能です：
 
-[DR Hair Transplante Capilar](https://drhairtransplantecapilar.com.br)
+[drhairtransplantecapilar.com.br](https://drhairtransplantecapilar.com.br)
+
+## ライセンス
+
+このプロジェクトは**MITライセンス**の下で提供されています。詳細については[LICENSE](LICENSE)ファイルを参照してください。
