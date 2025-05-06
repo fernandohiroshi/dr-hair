@@ -387,5 +387,33 @@
         "feedback": "Tive um atendimento impecável com a Dr Hair, foi uma experiência incrível. Desde a primeira conversa na consulta, até o procedimento, inclusive o pós-operatório, tive todo suporte e atenção que precisava. O Dr. Ediney, juntamente com sua equipe, além de excelente profissional, foi sempre muito atencioso e cuidadoso."
       }
     ]
+  },
+
+  "CadastroForm": {
+    "title": "Junte-se a nós",
+    "subtitle": "Cadastre-se para receber novidades e conteúdos exclusivos.",
+    "submit": "Enviar",
+    "successMessage": "Obrigado por se cadastrar! Seus dados foram enviados com sucesso.",
+    "placeholders": {
+      "name": "Digite seu nome",
+      "email": "Digite seu email",
+      "phone": "Digite seu telefone",
+      "birthdate": "Data de nascimento",
+      "profession": "Profissão",
+      "city": "Cidade",
+      "country": "País",
+      "message": "Digite sua mensagem"
+    }
+  },
+
+  "validation": {
+    "nameRequired": "O nome é obrigatório.",
+    "emailRequired": "O e-mail é obrigatório.",
+    "invalidEmail": "Por favor, insira um e-mail válido.",
+    "phoneRequired": "O telefone é obrigatório.",
+    "birthdateRequired": "A data de nascimento é obrigatória.",
+    "professionRequired": "A profissão é obrigatória.",
+    "cityRequired": "A cidade é obrigatória.",
+    "countryRequired": "O país é obrigatório."
   }
 }
