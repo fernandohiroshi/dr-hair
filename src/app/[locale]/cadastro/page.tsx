@@ -115,9 +115,13 @@ export default function Cadastro() {
       country: formData.country,
       message: formData.message,
     }
-
     try {
-      const response = await emailjs.send('service_s5xc4un', 'template_0peddxj', templateParams, 'h-IZqL-9pdElK9sbA')
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!,
+      )
       setSubmitted(true)
     } catch (error) {
       console.error('Erro ao enviar o e-mail:', error)
