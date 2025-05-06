@@ -9,6 +9,7 @@ import emailjs from '@emailjs/browser'
 export default function Cadastro() {
   const t = useTranslations('CadastroForm')
   const h = useTranslations('NotFoundPage')
+  const v = useTranslations('validation') // Usando o namespace de validações
 
   const [formData, setFormData] = useState({
     name: '',
@@ -40,46 +41,46 @@ export default function Cadastro() {
     let isValid = true
 
     if (!formData.name) {
-      formErrors.name = t('validation.nameRequired')
+      formErrors.name = v('nameRequired') // Usando a tradução de validação
       isValid = false
     } else {
       formErrors.name = ''
     }
     if (!formData.email) {
-      formErrors.email = t('validation.emailRequired')
+      formErrors.email = v('emailRequired') // Usando a tradução de validação
       isValid = false
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      formErrors.email = t('validation.invalidEmail')
+      formErrors.email = v('invalidEmail') // Usando a tradução de validação
       isValid = false
     } else {
       formErrors.email = ''
     }
     if (!formData.phone) {
-      formErrors.phone = t('validation.phoneRequired')
+      formErrors.phone = v('phoneRequired') // Usando a tradução de validação
       isValid = false
     } else {
       formErrors.phone = ''
     }
     if (!formData.birthdate) {
-      formErrors.birthdate = t('validation.birthdateRequired')
+      formErrors.birthdate = v('birthdateRequired') // Usando a tradução de validação
       isValid = false
     } else {
       formErrors.birthdate = ''
     }
     if (!formData.profession) {
-      formErrors.profession = t('validation.professionRequired')
+      formErrors.profession = v('professionRequired') // Usando a tradução de validação
       isValid = false
     } else {
       formErrors.profession = ''
     }
     if (!formData.city) {
-      formErrors.city = t('validation.cityRequired')
+      formErrors.city = v('cityRequired') // Usando a tradução de validação
       isValid = false
     } else {
       formErrors.city = ''
     }
     if (!formData.country) {
-      formErrors.country = t('validation.countryRequired')
+      formErrors.country = v('countryRequired') // Usando a tradução de validação
       isValid = false
     } else {
       formErrors.country = ''
@@ -131,11 +132,11 @@ export default function Cadastro() {
   }
 
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center">
+    <div className="flex h-screen w-full flex-col items-center justify-center p-2">
       {!submitted && (
         <div className="text-center">
-          <h1 className="mb-4 text-2xl font-bold md:text-4xl">{t('title')}</h1>
-          <p className="mb-8 md:mb-12">{t('subtitle')}</p>
+          <h1 className="mb-2 text-2xl font-bold md:text-4xl">{t('title')}</h1>
+          <p className="mb-8">{t('subtitle')}</p>
         </div>
       )}
 
@@ -148,7 +149,10 @@ export default function Cadastro() {
           </Link>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mx-auto flex w-full max-w-xl flex-col gap-4">
+        <form
+          onSubmit={handleSubmit}
+          className="mx-auto flex w-full max-w-xl flex-col gap-2 rounded-xl bg-white/20 p-4 shadow-xl"
+        >
           <input
             className="rounded-md p-2 outline-none"
             name="name"
@@ -157,7 +161,7 @@ export default function Cadastro() {
             value={formData.name}
             onChange={handleChange}
           />
-          {errors.name && <p className="text-red-500">{errors.name}</p>}
+          {errors.name && <p className="text-xs text-red-700">{errors.name}</p>}
 
           <input
             className="rounded-md p-2 outline-none"
@@ -167,7 +171,7 @@ export default function Cadastro() {
             value={formData.email}
             onChange={handleChange}
           />
-          {errors.email && <p className="text-red-500">{errors.email}</p>}
+          {errors.email && <p className="text-xs text-red-700">{errors.email}</p>}
 
           <input
             className="rounded-md p-2 outline-none"
@@ -177,7 +181,7 @@ export default function Cadastro() {
             value={formData.phone}
             onChange={handleChange}
           />
-          {errors.phone && <p className="text-red-500">{errors.phone}</p>}
+          {errors.phone && <p className="text-xs text-red-700">{errors.phone}</p>}
 
           <input
             className="rounded-md p-2 outline-none"
@@ -187,7 +191,7 @@ export default function Cadastro() {
             value={formData.birthdate}
             onChange={handleChange}
           />
-          {errors.birthdate && <p className="text-red-500">{errors.birthdate}</p>}
+          {errors.birthdate && <p className="text-xs text-red-700">{errors.birthdate}</p>}
 
           <input
             className="rounded-md p-2 outline-none"
@@ -197,7 +201,7 @@ export default function Cadastro() {
             value={formData.profession}
             onChange={handleChange}
           />
-          {errors.profession && <p className="text-red-500">{errors.profession}</p>}
+          {errors.profession && <p className="text-xs text-red-700">{errors.profession}</p>}
 
           <input
             className="rounded-md p-2 outline-none"
@@ -207,7 +211,7 @@ export default function Cadastro() {
             value={formData.city}
             onChange={handleChange}
           />
-          {errors.city && <p className="text-red-500">{errors.city}</p>}
+          {errors.city && <p className="text-xs text-red-700">{errors.city}</p>}
 
           <input
             className="rounded-md p-2 outline-none"
@@ -217,16 +221,16 @@ export default function Cadastro() {
             value={formData.country}
             onChange={handleChange}
           />
-          {errors.country && <p className="text-red-500">{errors.country}</p>}
+          {errors.country && <p className="text-xs text-red-700">{errors.country}</p>}
 
           <textarea
-            className="rounded-md p-2 outline-none"
+            className="resize-none rounded-md p-2 outline-none"
             name="message"
             placeholder={t('placeholders.message')}
             value={formData.message}
             onChange={handleChange}
           />
-          {errors.message && <p className="text-red-500">{errors.message}</p>}
+          {errors.message && <p className="text-xs text-red-700">{errors.message}</p>}
 
           <button
             type="submit"
