@@ -390,30 +390,34 @@
   },
 
   "CadastroForm": {
-    "title": "¡Unite a nosotros!",
-    "subtitle": "Registrate para recibir novedades y contenidos exclusivos.",
+    "title": "Registro",
+    "subtitle": "Completá el formulario para registrarte",
     "submit": "Enviar",
-    "successMessage": "¡Gracias por registrarte! Tus datos fueron enviados con éxito.",
+    "successMessage": "¡Registro enviado con éxito!",
     "placeholders": {
-      "name": "Escribí tu nombre",
-      "email": "Escribí tu correo",
-      "phone": "Escribí tu teléfono",
+      "selectCompany": "Elegí la empresa",
+      "employeeName": "Nombre del funcionario",
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
       "birthdate": "Fecha de nacimiento",
       "profession": "Profesión",
       "city": "Ciudad",
       "country": "País",
-      "message": "Ingresa tu mensaje"
+      "message": "Mensaje"
     }
   },
 
   "validation": {
     "nameRequired": "El nombre es obligatorio.",
-    "emailRequired": "El correo electrónico es obligatorio.",
-    "invalidEmail": "Por favor ingrese un correo electrónico válido.",
+    "emailRequired": "El correo es obligatorio.",
+    "invalidEmail": "Formato de correo inválido.",
     "phoneRequired": "El teléfono es obligatorio.",
     "birthdateRequired": "La fecha de nacimiento es obligatoria.",
     "professionRequired": "La profesión es obligatoria.",
     "cityRequired": "La ciudad es obligatoria.",
-    "countryRequired": "El país es obligatorio."
+    "countryRequired": "El país es obligatorio.",
+    "companyRequired": "Elegí una empresa.",
+    "employeeNameRequired": "Ingresá el nombre del funcionario."
   }
 }

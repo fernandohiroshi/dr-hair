@@ -5,13 +5,29 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 import { Button } from '@/components/ui/button'
 import emailjs from '@emailjs/browser'
+import CadastroForm from '@/components/view/cadastroPage/cadastroForm'
 
-export default function Cadastro() {
+type FormFields =
+  | 'name'
+  | 'email'
+  | 'phone'
+  | 'birthdate'
+  | 'profession'
+  | 'city'
+  | 'country'
+  | 'message'
+  | 'company'
+  | 'employeeName'
+
+type FormData = Record<FormFields, string>
+type FormErrors = Record<FormFields, string>
+
+export default function CadastroPage() {
   const t = useTranslations('CadastroForm')
   const h = useTranslations('NotFoundPage')
-  const v = useTranslations('validation') // Usando o namespace de validações
+  const v = useTranslations('validation')
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
@@ -20,9 +36,11 @@ export default function Cadastro() {
     city: '',
     country: '',
     message: '',
+    company: '',
+    employeeName: '',
   })
 
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<FormErrors>({
     name: '',
     email: '',
     phone: '',
@@ -31,66 +49,48 @@ export default function Cadastro() {
     city: '',
     country: '',
     message: '',
+    company: '',
+    employeeName: '',
   })
 
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
+  const requiredFields: FormFields[] = [
+    'name',
+    'email',
+    'phone',
+    'birthdate',
+    'profession',
+    'city',
+    'country',
+    'company',
+    'employeeName',
+  ]
+
   const validateForm = () => {
     let formErrors = { ...errors }
     let isValid = true
 
-    if (!formData.name) {
-      formErrors.name = v('nameRequired') // Usando a tradução de validação
+    requiredFields.forEach((field) => {
+      if (!formData[field]) {
+        formErrors[field] = v(`${field}Required`)
+        isValid = false
+      } else {
+        formErrors[field] = ''
+      }
+    })
+
+    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
+      formErrors.email = v('invalidEmail')
       isValid = false
-    } else {
-      formErrors.name = ''
-    }
-    if (!formData.email) {
-      formErrors.email = v('emailRequired') // Usando a tradução de validação
-      isValid = false
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      formErrors.email = v('invalidEmail') // Usando a tradução de validação
-      isValid = false
-    } else {
-      formErrors.email = ''
-    }
-    if (!formData.phone) {
-      formErrors.phone = v('phoneRequired') // Usando a tradução de validação
-      isValid = false
-    } else {
-      formErrors.phone = ''
-    }
-    if (!formData.birthdate) {
-      formErrors.birthdate = v('birthdateRequired') // Usando a tradução de validação
-      isValid = false
-    } else {
-      formErrors.birthdate = ''
-    }
-    if (!formData.profession) {
-      formErrors.profession = v('professionRequired') // Usando a tradução de validação
-      isValid = false
-    } else {
-      formErrors.profession = ''
-    }
-    if (!formData.city) {
-      formErrors.city = v('cityRequired') // Usando a tradução de validação
-      isValid = false
-    } else {
-      formErrors.city = ''
-    }
-    if (!formData.country) {
-      formErrors.country = v('countryRequired') // Usando a tradução de validação
-      isValid = false
-    } else {
-      formErrors.country = ''
     }
 
     setErrors(formErrors)
     return isValid
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
@@ -100,12 +100,10 @@ export default function Cadastro() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
-    if (!validateForm()) {
-      return
-    }
+    if (!validateForm()) return
 
     setLoading(true)
+
     const templateParams = {
       from_name: formData.name,
       email: formData.email,
@@ -115,9 +113,12 @@ export default function Cadastro() {
       city: formData.city,
       country: formData.country,
       message: formData.message,
+      company: formData.company,
+      employeeName: formData.employeeName,
     }
+
     try {
-      const response = await emailjs.send(
+      await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         templateParams,
@@ -133,133 +134,28 @@ export default function Cadastro() {
 
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center p-2">
-      {!submitted && (
-        <div className="text-center">
-          <h1 className="mb-2 text-2xl font-bold md:text-4xl">{t('title')}</h1>
-          <p className="mb-8">{t('subtitle')}</p>
-        </div>
-      )}
-
-      {submitted ? (
+      {!submitted ? (
+        <>
+          <div className="text-center">
+            <h1 className="mb-2 text-2xl font-bold md:text-4xl">{t('title')}</h1>
+            <p className="mb-8">{t('subtitle')}</p>
+          </div>
+          <CadastroForm
+            formData={formData}
+            errors={errors}
+            loading={loading}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            t={t}
+          />
+        </>
+      ) : (
         <div className="mx-auto max-w-2xl rounded-2xl p-8 text-center md:mt-24">
-          <p className="mb-4 text-xl font-semibold text-emerald-600 md:text-3xl"> {t('successMessage')}</p>
-
+          <p className="mb-4 text-xl font-semibold text-emerald-600 md:text-3xl">{t('successMessage')}</p>
           <Link href="/">
             <Button variant="outline">{h('backToHome')}</Button>
           </Link>
         </div>
-      ) : (
-        <form
-          onSubmit={handleSubmit}
-          className="mx-auto flex w-full max-w-xl flex-col gap-2 rounded-xl bg-white/20 p-4 shadow-xl"
-        >
-          <input
-            className="rounded-md p-2 outline-none"
-            name="name"
-            type="text"
-            placeholder={t('placeholders.name')}
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {errors.name && <p className="text-xs text-red-700">{errors.name}</p>}
-
-          <input
-            className="rounded-md p-2 outline-none"
-            name="email"
-            type="email"
-            placeholder={t('placeholders.email')}
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p className="text-xs text-red-700">{errors.email}</p>}
-
-          <input
-            className="rounded-md p-2 outline-none"
-            name="phone"
-            type="tel"
-            placeholder={t('placeholders.phone')}
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          {errors.phone && <p className="text-xs text-red-700">{errors.phone}</p>}
-
-          <input
-            className="rounded-md p-2 outline-none"
-            name="birthdate"
-            type="date"
-            placeholder={t('placeholders.birthdate')}
-            value={formData.birthdate}
-            onChange={handleChange}
-          />
-          {errors.birthdate && <p className="text-xs text-red-700">{errors.birthdate}</p>}
-
-          <input
-            className="rounded-md p-2 outline-none"
-            name="profession"
-            type="text"
-            placeholder={t('placeholders.profession')}
-            value={formData.profession}
-            onChange={handleChange}
-          />
-          {errors.profession && <p className="text-xs text-red-700">{errors.profession}</p>}
-
-          <input
-            className="rounded-md p-2 outline-none"
-            name="city"
-            type="text"
-            placeholder={t('placeholders.city')}
-            value={formData.city}
-            onChange={handleChange}
-          />
-          {errors.city && <p className="text-xs text-red-700">{errors.city}</p>}
-
-          <input
-            className="rounded-md p-2 outline-none"
-            name="country"
-            type="text"
-            placeholder={t('placeholders.country')}
-            value={formData.country}
-            onChange={handleChange}
-          />
-          {errors.country && <p className="text-xs text-red-700">{errors.country}</p>}
-
-          <textarea
-            className="resize-none rounded-md p-2 outline-none"
-            name="message"
-            placeholder={t('placeholders.message')}
-            value={formData.message}
-            onChange={handleChange}
-          />
-          {errors.message && <p className="text-xs text-red-700">{errors.message}</p>}
-
-          <button
-            type="submit"
-            disabled={loading}
-            className="cursor-pointer rounded-md bg-[#f5f2ed7c] px-4 py-2 text-base font-semibold shadow-md shadow-black/20 duration-300 hover:bg-[#f5f2ed] disabled:opacity-50"
-          >
-            {loading ? (
-              <svg
-                className="mx-auto h-5 w-5 animate-spin text-black"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <circle className="opacity-25" cx="12" cy="12" r="10" strokeWidth="4"></circle>
-                <path
-                  className="opacity-75"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="4"
-                  d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0z"
-                ></path>
-              </svg>
-            ) : (
-              t('submit')
-            )}
-          </button>
-        </form>
       )}
     </div>
   )

@@ -344,8 +344,8 @@
   },
 
   "ServicesBtn": {
-    "buttonTitle": "Haz clic aquí",
-    "buttonText": "Ver otros servicios"
+    "buttonTitle": "Clique aqui",
+    "buttonText": "Ver outros serviços"
   },
 
   "About": {
@@ -390,30 +390,34 @@
   },
 
   "CadastroForm": {
-    "title": "Junte-se a nós",
-    "subtitle": "Cadastre-se para receber novidades e conteúdos exclusivos.",
+    "title": "Cadastro",
+    "subtitle": "Preencha o formulário abaixo para se cadastrar",
     "submit": "Enviar",
-    "successMessage": "Obrigado por se cadastrar! Seus dados foram enviados com sucesso.",
+    "successMessage": "Cadastro enviado com sucesso!",
     "placeholders": {
-      "name": "Digite seu nome",
-      "email": "Digite seu email",
-      "phone": "Digite seu telefone",
+      "selectCompany": "Selecione a empresa",
+      "employeeName": "Nome do funcionário",
+      "name": "Nome completo",
+      "email": "E-mail",
+      "phone": "Telefone",
       "birthdate": "Data de nascimento",
       "profession": "Profissão",
       "city": "Cidade",
       "country": "País",
-      "message": "Digite sua mensagem"
+      "message": "Mensagem"
     }
   },
 
   "validation": {
     "nameRequired": "O nome é obrigatório.",
     "emailRequired": "O e-mail é obrigatório.",
-    "invalidEmail": "Por favor, insira um e-mail válido.",
+    "invalidEmail": "Formato de e-mail inválido.",
     "phoneRequired": "O telefone é obrigatório.",
     "birthdateRequired": "A data de nascimento é obrigatória.",
     "professionRequired": "A profissão é obrigatória.",
     "cityRequired": "A cidade é obrigatória.",
-    "countryRequired": "O país é obrigatório."
+    "countryRequired": "O país é obrigatório.",
+    "companyRequired": "Selecione uma empresa.",
+    "employeeNameRequired": "Informe o nome do funcionário."
   }
 }

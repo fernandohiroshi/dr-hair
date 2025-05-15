@@ -26,12 +26,7 @@ export const Nav = () => {
       {/* DESKTOP NAVIGATION */}
       <nav role="navigation" className="hidden items-center gap-2 text-sm md:gap-6 lg:flex lg:gap-8 xl:text-base">
         {navLinks.map(({ href, title, key }) => (
-          <Link
-            key={href}
-            className="duration-300 ease-in-out hover:tracking-wider hover:underline"
-            href={href}
-            title={title}
-          >
+          <Link key={href} className="duration-300 ease-in-out hover:tracking-wider hover:underline" href={href}>
             {t(key)}
           </Link>
         ))}
