@@ -18,9 +18,10 @@ export const Clinic = () => {
   // ARRAY CONTAINING THE IMAGE SOURCES FOR THE CAROUSEL
   const images = [
     'https://imgix.cosmicjs.com/e41cddd0-e448-11ef-8a63-eb57d6c77a36-frente.jpeg',
+    'https://imgix.cosmicjs.com/ba5872a0-5d9e-11f0-9081-39af07cadf70-clinic02.jpeg',
+    'https://imgix.cosmicjs.com/ba1d1750-5d9e-11f0-9081-39af07cadf70-clinic01.jpeg',
     'https://imgix.cosmicjs.com/e4a33980-e9a6-11ef-9da4-c1d07900a603-recepcao.jpg',
     'https://imgix.cosmicjs.com/e35017f0-e448-11ef-8a63-eb57d6c77a36-cirugia-py.jpeg',
-    'https://imgix.cosmicjs.com/92458030-eaa0-11ef-af71-9552422268b6-clinic4.jpeg',
     'https://imgix.cosmicjs.com/8293af50-eabd-11ef-af71-9552422268b6-clinic05.jpg',
   ]
 
